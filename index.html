@@ -2,22 +2,43 @@
 layout: default
 ---
 
-<div class="home">
+<h2>What Is NUnit?</h2>
 
-  <h1 class="page-heading">Posts</h1>
+<p>NUnit is a unit-testing framework for all .Net languages. Initially ported from <a href="http://www.junit.org/">JUnit</a>, the current
+    production release, version 3.0, has been completely rewritten with many new features and support for a wide range of
+    .NET platforms.</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<h2>License</h2>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<p>NUnit is Open Source software and NUnit 3.0 is released under the <a href="/nuget/nunit3-license.txt">MIT license</a>. Earlier releases
+    used the <a href="/nuget/license.html">NUnit license</a>. Both of these licenses allow the use of NUnit in free and commercial applications
+    and libraries without restrictions.</p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<h2>About Us</h2>
 
-</div>
+<p>NUnit 3.0 was created by Charlie Poole, Rob Prouse, Simone Busoli, Neil Colvin and numerous community contributors.</p>
+
+<p>Earlier versions of NUnit were developed by Charlie Poole, James W. Newkirk, Alexei A. Vorontsov, Michael C. Two and Philip
+    A. Craig.</p>
+
+<h2>Donations</h2>
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="charlie@nunit.com">
+    <input type="hidden" name="item_name" value="Donation in support of the NUnit project">
+    <input type="hidden" name="no_shipping" value="0">
+    <input type="hidden" name="no_note" value="1">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="tax" value="0">
+    <input type="hidden" name="lc" value="US">
+    <input type="hidden" name="bn" value="PP-DonationsBF">
+    <input type="image" src="/img/btn_donate_LG.gif" border="0" name="submit" alt="Donate through PayPal">
+</form>
+
+<p>The NUnit team invests a great deal of time and effort to make NUnit a useful tool. In addition, we have expenses. We have
+    to purchase domain names, arrange for web site hosting and acquire equipment.</p>
+
+<p>Making a financial contribution is one way in which you can help us ensure that NUnit continues to develop and remains free
+    and open software. For more information or to view a list of donors, see our <a href="/donations/">Donations</a> page.</p>

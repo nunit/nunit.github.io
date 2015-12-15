@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<NUnitSettings>
+  <Settings>
+    <Setting name="Gui.DisplayFormat" value="Full" />
+    <Setting name="Gui.FixedFont" value="Liberation Mono, 8pt" />
+    <Setting name="Gui.MainForm.Font" value="Loma, 8.25pt" />
+    <Setting name="Gui.MainForm.Height" value="716" />
+    <Setting name="Gui.MainForm.Left" value="151" />
+    <Setting name="Gui.MainForm.Maximized" value="False" />
+    <Setting name="Gui.MainForm.SplitPosition" value="557" />
+    <Setting name="Gui.MainForm.Top" value="116" />
+    <Setting name="Gui.MainForm.Width" value="1222" />
+    <Setting name="Gui.RecentProjects.CheckFilesExist" value="True" />
+    <Setting name="Gui.RecentProjects.File1" value="/home/charlie/Dev/NUnit/nunit-2.5/work/samples/bin/SampleFixtureExtensionTests.dll" />
+    <Setting name="Gui.RecentProjects.File2" value="/home/charlie/Dev/NUnit/nunit-2.5/work/samples/bin/SampleSuiteExtensionTests.dll" />
+    <Setting name="Gui.RecentProjects.File3" value="/home/charlie/Dev/NUnit/nunit-2.5/work/samples/bin/cs-syntax.dll" />
+    <Setting name="Gui.RecentProjects.File4" value="/home/charlie/Dev/NUnit/nunit-2.5/work/samples/bin/cs-money.dll" />
+    <Setting name="Gui.ResultTabs.DisplayErrorsTab" value="True" />
+    <Setting name="Gui.ResultTabs.DisplayNotRunTab" value="True" />
+    <Setting name="Gui.ResultTabs.ErrorBrowser.SourceCodeDisplay" value="True" />
+    <Setting name="Gui.ResultTabs.ErrorsTab.ToolTipsEnabled" value="True" />
+    <Setting name="Gui.ResultTabs.ErrorsTab.WordWrapEnabled" value="False" />
+    <Setting name="Gui.ResultTabs.ErrorsTabSplitterPosition" value="212" />
+    <Setting name="Gui.ResultTabs.SelectedTab" value="2" />
+    <Setting name="Gui.Settings.InitialPage" value="Advanced Settings.Internal Trace" />
+    <Setting name="Options.LoadLastProject" value="True" />
+    <Setting name="Options.TestLoader.ReloadOnRun" value="False" />
+  </Settings>
+</NUnitSettings>
+
