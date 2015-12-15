@@ -21,7 +21,7 @@ You can make a donation easily through Paypal, by clicking on the 'Donate' butto
     <input type="hidden" name="tax" value="0">
     <input type="hidden" name="lc" value="US">
     <input type="hidden" name="bn" value="PP-DonationsBF">
-    <input type="image" src="/img/btn_donate_LG.gif" border="0" name="submit" alt="Donate through PayPal">
+    <input type="submit" name="submit" class="btn btn-success" value="Donate" alt="Donate through PayPal">
 </form>
 
 ## Recent Donations

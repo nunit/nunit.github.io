@@ -1,7 +1,23 @@
 ---
 layout: default
 ---
+<div class="jumbotron hidden-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <a class="btn btn-danger btn-lg" href="/download/" role="button">Download »</a>
+      </div>
+      <div class="col-sm-8"></div>
+      <div class="col-sm-2">
+        <object data="/img/nunit.svg" type="image/svg+xml" width="128" height="128">
+          <img src="/img/nunit_128.png" />
+        </object>        
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="container">
 <h2>What Is NUnit?</h2>
 
 <p>NUnit is a unit-testing framework for all .Net languages. Initially ported from <a href="http://www.junit.org/">JUnit</a>, the current
@@ -23,7 +39,7 @@ layout: default
 
 <h2>Donations</h2>
 
-
+<p>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
     <input type="hidden" name="cmd" value="_donations">
     <input type="hidden" name="business" value="charlie@nunit.com">
@@ -34,11 +50,14 @@ layout: default
     <input type="hidden" name="tax" value="0">
     <input type="hidden" name="lc" value="US">
     <input type="hidden" name="bn" value="PP-DonationsBF">
-    <input type="image" src="/img/btn_donate_LG.gif" border="0" name="submit" alt="Donate through PayPal">
+    <input type="submit" name="submit" class="btn btn-success" value="Donate" alt="Donate through PayPal">
 </form>
+</p>
 
 <p>The NUnit team invests a great deal of time and effort to make NUnit a useful tool. In addition, we have expenses. We have
     to purchase domain names, arrange for web site hosting and acquire equipment.</p>
 
 <p>Making a financial contribution is one way in which you can help us ensure that NUnit continues to develop and remains free
     and open software. For more information or to view a list of donors, see our <a href="/donations/">Donations</a> page.</p>
+
+</div>
