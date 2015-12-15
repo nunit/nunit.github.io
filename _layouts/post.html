@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="container">
     <div class="content">
         <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -9,8 +8,10 @@ layout: default
             <header>
                 <h1 itemprop="name headline">{{ page.title }}</h1>
                 <p>
-                    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{%
-                    endif %}</p>
+                    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+                    {% if page.author %}
+                     • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+                    {% endif %}</p>
             </header>
 
             <div itemprop="articleBody">
