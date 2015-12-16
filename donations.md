@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Donations
+icon: fa-usd
 permalink: /donations/
 ---
 
