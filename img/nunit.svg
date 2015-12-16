@@ -6,17 +6,17 @@
       #circles, #ring, #letter_n {
         display: none;	
       }
-      @media screen and (min-width: 16px) {
+      @media all and (min-width: 16px) {
         #letter_n {
           display: block;	
         }
       }
-      @media screen and (min-width: 28px) {
+      @media all and (min-width: 28px) {
         #ring {
           display: block;	
         }
       }
-      @media screen and (min-width: 32px) {
+      @media all and (min-width: 32px) {
         #circles {
           display: block;	
         }
