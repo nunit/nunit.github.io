@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact Us
-icon: fa-user
+icon: fa-envelope-o
 permalink: /contact/
 ---
 
