@@ -4,8 +4,6 @@ title: Contact Us
 permalink: /contact/
 ---
 
-## For help using NUnit
-
 The [nunit-discuss](http://groups.google.com/group/nunit-discuss) mailing list is the best place to start. It is monitored regularly 
 by the NUnit developers and other experienced users. Describe your problem clearly and be sure to indicate the version of NUnit you are using.
 

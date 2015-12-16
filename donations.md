@@ -4,8 +4,6 @@ title: Donations
 permalink: /donations/
 ---
 
-## Donating to NUnit
-
 Your donation to NUnit helps us pay for web hosting, making presentations at user events and - of course - continuing 
 to develop the software itself.
 
@@ -21,7 +19,7 @@ You can make a donation easily through Paypal, by clicking on the 'Donate' butto
     <input type="hidden" name="tax" value="0">
     <input type="hidden" name="lc" value="US">
     <input type="hidden" name="bn" value="PP-DonationsBF">
-    <input type="submit" name="submit" class="btn btn-success" value="Donate" alt="Donate through PayPal">
+    <button type="submit" name="submit" class="btn btn-success">Donate <i class="fa fa-credit-card"></i></button>
 </form>
 
 ## Recent Donations
