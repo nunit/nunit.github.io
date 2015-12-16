@@ -490,12 +490,12 @@ $navbar-inverse-toggle-border-color:        #333;
 //
 //##
 
-// $jumbotron-padding:              30px
-// $jumbotron-color:                inherit
-// $jumbotron-bg:                   $gray-lighter
-// $jumbotron-heading-color:        inherit
-// $jumbotron-font-size:            ceil(($font-size-base * 1.5))
-// $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5))
+$jumbotron-padding:              30px;
+$jumbotron-color:                $gray-lighter;
+$jumbotron-bg:                   $color-primary-0;
+$jumbotron-heading-color:        white;
+$jumbotron-font-size:            ceil(($font-size-base * 1.5));
+$jumbotron-heading-font-size:    ceil(($font-size-base * 4.5));
 
 
 //== Form states and alerts
