@@ -2,8 +2,8 @@
 
 ## Installing Jekyll
 
-1. Install Ruby 2.1
-2. If you are on Windows, install DevKit
+1. Install Ruby 2.1 ([Linux](https://www.ruby-lang.org/en/documentation/installation/), [Mac](https://gorails.com/setup/osx/10.10-yosemite), [Windows](http://rubyinstaller.org/))
+2. If you are on Windows, install [DevKit](http://rubyinstaller.org/add-ons/devkit/)
 3. `gem install jekyll`
 4. `gem install bundler`
 
