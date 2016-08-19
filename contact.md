@@ -21,7 +21,8 @@ issues, please consult our [contribution guidelines](https://github.com/nunit/nu
 
 If you are not sure where to report a particular problem, please ask! If you aren't sure, don't worry... we can cross-reference it from the appropriate project.
 
-- [NUnit Framework, Console Runner and Engine](http://github.com/nunit/nunit/issues)
+- [NUnit Framework](http://github.com/nunit/nunit/issues)
+- [NUnit Console Runner and Engine](http://github.com/nunit/nunit-console/issues)
 - [NUnit 3 VS Adapter](http://github.com/nunit/nunit3-vs-adapter/issues)
 - [NUnit Xamarin Runner](http://github.com/nunit/nunit.xamarin/issues)
 - [NUnit Templates](http://github.com/nunit/nunit.templates/issues)
