@@ -1,3 +1,6 @@
+---
+layout: help
+---
 <div id="help_content">
 
 <style><!--
@@ -558,7 +561,7 @@ different preference is desired.
 which are installed in the GAC. The framework assembly contains all 
 types that are normally referenced by tests, while the core contains
 those types used by the gui and console runners to execute those
-tests. Tests requiring use of core types – TestSuite, for example –
+tests. Tests requiring use of core types - TestSuite, for example -
 will need to add a reference to the nunit.core.dll assembly.
 
 <li>The NAnt build script now supports building NUnit using version 1.0, 1.1 
@@ -602,7 +605,7 @@ because its parent suite is selected.
 
 <li>Tests may now be run using a filter. Currently, this support is used 
 only by the new Category feature, but it is intended to be of general 
-application for clients and – eventually – users.
+application for clients and - eventually - users.
 
 <li>NUnit now recognizes when the loaded tests were built using an earlier 
 version of the nunit framework and issues an appropriate message. 
@@ -682,7 +685,7 @@ actions occurred.
 <li>This facility is in no way a replacement for full-fledged mock 
 frameworks such as NMock and is not expected to add significant 
 features in upcoming releases. Its primary purpose is to support 
-NUnit’s own tests. We wanted to do that without the need to choose a
+NUnit's own tests. We wanted to do that without the need to choose a
 particular mock framework and without having to deal with versioning 
 issues outside of NUnit itself.
 
@@ -697,7 +700,7 @@ migrate to a more complete framework as your needs call for it.
 <ul>
 <li>The CategoryAttribute was originally designed to have an Explicit 
 property. This was included in some early releases and is described in
-the Pragmatic Programmers’ recent book. This property has been removed
+the Pragmatic Programmers' recent book. This property has been removed
 and is replaced by the ExplicitAttribute, which can be used in
 conjunction with Category to achieve the same effect as shown in
 their examples.
@@ -748,13 +751,13 @@ run is also displayed if the user attempts to exit while a test is running.
 The GUI test threads run in the MTA by default. A configuration file setting may be used to run
 them in an STA.
 
-<li>XML output from a test run may now be saved using the Tools | Save Results as XML… menu
+<li>XML output from a test run may now be saved using the Tools | Save Results as XML... menu
 item. The format is the same as that used by the Console runner.
 
 <li>When an exception occurs while trying to load, unload or run a test, the complete stack trace for
-that exception is available through the Tools | Exception Details… menu item.
+that exception is available through the Tools | Exception Details... menu item.
 
-<li>The Tools | Options… menu item allows setting a number of options. [Specify]
+<li>The Tools | Options... menu item allows setting a number of options. [Specify]
 
 <li>Automatic reloading of test assemblies may now be disabled. An alternate approach of reloading
 assemblies whenever a run begins is also available as an option.
@@ -810,7 +813,7 @@ conveniently in an editor that requires CRLF at the end of each line.
 
 <h4>Limitations</h4>
 <ul>
-<li>NUnit can only load assemblies as permitted under .NET’s Code Access Security. Using the
+<li>NUnit can only load assemblies as permitted under .NET's Code Access Security. Using the
 default settings, this means that you will be unable to load from any UNC path, including one
 that specifies the name of the local computer. Although you may use the .NET Framework
 configuration utility to allow loading of such applications, you must do this with care. Often,
@@ -834,8 +837,8 @@ construct suites of tests using a Suite property. This has been replaced with dy
 suites based on namespaces. Given an assembly the program will search through the assembly
 looking for test fixtures. Once it finds one it creates a suite based for each namespace and the
 specific test fixture. For example, NUnit.Tests.SuccessTests will build a containing Suite
-called “NUnit” which will contain another suite called “Tests” which in turn will create another
-suite called “SuccessTests” which finally will hold the individual test methods. This corrects an
+called "NUnit" which will contain another suite called "Tests" which in turn will create another
+suite called "SuccessTests" which finally will hold the individual test methods. This corrects an
 error prone task where things may or may not have been included in a suite.
 
 <li>Additional samples, Managed C++ and Visual J#. The existing samples (C#, VB.NET, Money)
@@ -843,7 +846,7 @@ have been upgraded to the new version. Money-port has been included to demonstra
 minimal amount of effort required to upgrade.
 
 <li>A class TestCase in nunit.framework.dll has been provided for backwards compatibility.
-See the “Money-port” project as a sample of what is required to upgrade to the new version. The
+See the "Money-port" project as a sample of what is required to upgrade to the new version. The
 only change is to update the reference to the new framework dll and provide a default constructor.
 
 <li>The exception that is thrown when an Assertion fails is now called AssertionException. In
@@ -858,7 +861,7 @@ individual tests or suites from the tree.
 <li>Dynamic reloading of an assembly using AppDomains and shadow copying. This also
 applies if you add or change tests. The assembly will be reloaded and the display will be
 updated automatically. The shadow copies use we use a configurable directory specified 
-in the executable’s (nunit-gui and nunit-console) config files.
+in the executable's (nunit-gui and nunit-console) config files.
 
 <li>A reload command menu option to load and assemblies that may have been modified.
 
@@ -869,7 +872,7 @@ screen.
 used assemblies. If no command line arguments are used to start the forms executable
 the most recent assembly is loaded by default.
 
-<li>The “Run” button is the default button on the form, which allows hitting return to start
+<li>The "Run" button is the default button on the form, which allows hitting return to start
 the tests.
 
 <li>Patches suggested by Al Gonzalez
