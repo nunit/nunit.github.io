@@ -159,3 +159,6 @@ pre.prettyprint {
     margin: 0 0 1em 0;
     max-width: 660px;
 }
+
+ul.across { width: 100%; display: block; list-style: none; }
+ul.across li { float: left; display: block; width: 9em }
