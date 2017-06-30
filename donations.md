@@ -5,7 +5,7 @@ icon: fa-usd
 permalink: /donations/
 ---
 
-Your donation to NUnit helps us pay for web hosting, making presentations at user events and - of course - continuing 
+Your donation to NUnit helps us pay for web hosting, making presentations at user events and - of course - continuing
 to develop the software itself.
 
 You can make a donation easily through Paypal, by clicking on the 'Donate' button.
@@ -16,8 +16,23 @@ You can make a donation easily through Paypal, by clicking on the 'Donate' butto
 
 We thank the following individuals and companies for their donations to the NUnit project.
 
+### 2016
+
+- MacFarlane Physiotherapy, [www.macfarlanephysio.co.uk](http://www.macfarlanephysio.co.uk)
+- Dzmitry Lahoda
+- Righthand Miha Markic s.p.
+- Erl Egestad
+
 ### 2015
 
+- Jason Walker
+- Bennex E-commerce Ltd, [giftprezzy.com](http://giftprezzy.com)
+- Brandon Ringe
+- Stephen Chownwai
+- Галимова Алсу
+- Justin Klumpp
+- Righthand Miha Markic s.p.
+- Gregory HillsHelmer
 - Bryan & Armstrong Ltd. [bryan-armstrong.com](http://bryan-armstrong.com)
 - Sebastien Guimmara
 - Ian Carson
