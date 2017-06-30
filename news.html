@@ -9,14 +9,18 @@ permalink: /news/
 
     <h1><i class="fa fa-commenting-o"></i> News</h1>
 
-    <ul>
-      {% for post in site.posts %}
-      <li>
-        <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
+    <div class="row">
+      <div class="col-sm-6">
+        <table class="table table-condensed table-striped">
+          {% for post in site.posts %}
+          <tr>
+            <td><span>{{ post.date | date: "%b %-d, %Y" }}</span></td>
+            <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
 
     <p>subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
 
