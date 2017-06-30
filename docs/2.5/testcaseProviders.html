@@ -12,13 +12,13 @@ specific test cases that will be used in calling the test.
 <h4>Extension Point</h4>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	IExtensionPoint listeners = host.GetExtensionPoint( "ParameterProviders" );</pre>
 
 <h4>Interface</h4>
 <p>The extension object passed to Install must implement the ITestCaseProvider interface:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	public interface ITestCaseProvider
 	{
 		bool HasTestCasesFor( MethodInfo method );

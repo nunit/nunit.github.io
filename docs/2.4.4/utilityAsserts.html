@@ -7,7 +7,7 @@ layout: help
 <p>Two utility methods, Fail() and Ignore() are provided in order to allow more 
 	direct control of the test process:</p>
 <div class="code" style="width: 36em">
-	<pre class="prettyprint">Assert.Fail();
+	<pre class="highlight" class="prettyprint">Assert.Fail();
 Assert.Fail( string message );
 Assert.Fail( string message, object[] parms );
 
@@ -21,7 +21,7 @@ Assert.Ignore( string message, object[] parms );</pre>
 <p>Here's an example of its use to create a private assertion that tests whether a 
 	string contains an expected value.</p>
 <div class="code" style="width: 36em">
-	<pre class="prettyprint">public void AssertStringContains( string expected, string actual )
+	<pre class="highlight" class="prettyprint">public void AssertStringContains( string expected, string actual )
 {
     AssertStringContains( expected, actual, string.Empty );
 }

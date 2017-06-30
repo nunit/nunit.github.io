@@ -10,7 +10,7 @@ methods are provided for common value types so that languages that don't
 automatically box values can use them directly.</p>
 
 <div class="code" style="width: 36em" >
-	<pre class="prettyprint">Assert.AreEqual( int expected, int actual );
+	<pre class="highlight" class="prettyprint">Assert.AreEqual( int expected, int actual );
 Assert.AreEqual( int expected, int actual, string message );
 Assert.AreEqual( int expected, int actual, string message, 
                  params object[] parms );
@@ -67,7 +67,7 @@ Assert.AreNotEqual( object expected, object actual, string message,
 
 <p>The method overloads that compare two objects make special provision so that numeric 
 	values of different types compare as expected. This assert succeeds:
-	<pre class="prettyprint">        Assert.AreEqual( 5, 5.0 );</pre>
+	<pre class="highlight" class="prettyprint">        Assert.AreEqual( 5, 5.0 );</pre>
 </p>
 
 <h4>Comparing Floating Point Values</h4>
@@ -76,7 +76,7 @@ Assert.AreNotEqual( object expected, object actual, string message,
 argument that indicates a tolerance within which they will be considered 
 as equal. Special values are handled so that the following Asserts succeed:</p>
 
-<pre class="prettyprint">        Assert.AreEqual( double.PositiveInfinity, double.PositiveInfinity );
+<pre class="highlight" class="prettyprint">        Assert.AreEqual( double.PositiveInfinity, double.PositiveInfinity );
         Assert.AreEqual( double.NegativeInfinity, double.NegativeInfinity );
         Assert.AreEqual( double.NaN, double.NaN );</pre>
 

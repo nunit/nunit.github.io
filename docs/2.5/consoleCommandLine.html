@@ -18,19 +18,19 @@ layout: help
 <h4>Specifying an Assembly</h4>
 <p>The console program must always have an assembly or project specified. To run 
 the tests contained in the nunit.tests.dll use the following command:</p>
-<pre class="programtext">        nunit-console nunit.tests.dll</pre>
+<pre class="highlight" class="programtext">        nunit-console nunit.tests.dll</pre>
 
 <p>To run the tests in nunit.tests.dll through the Visual Studio project, use:</p>
-	<pre class="programtext">        nunit-console nunit.tests.csproj</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.csproj</pre>
 
 <p>To run the same tests through an NUnit test project you have defined, use:</p>
-	<pre class="programtext">        nunit-console nunit.tests.nunit</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.nunit</pre>
 
 <h4>Specifying an Assembly and a Test to be Run</h4>
 <p>You may specify a test to be run by proviig the full name of the test along
 with the containing assembly. For example to run NUnit.Tests.AssertionTests
 in the nunit.tests assembly use the following command:
-<pre class="programtext">        nunit-console /run:NUnit.Tests.AssertionTests nunit.tests.dll</pre>
+<pre class="highlight" class="programtext">        nunit-console /run:NUnit.Tests.AssertionTests nunit.tests.dll</pre>
 
 <p>The name of the test to be run may be that of a test case, test fixture or
 a namespace. Unlike the <b>/fixture</b> option, this option affects the running
@@ -44,7 +44,7 @@ in most cases.
 	along with the containing assembly. For example, to load the 
 	NUnit.Tests.AssertionTests in the nunit.tests.dll assembly use the following 
 	command:
-	<pre class="programtext">        nunit-console /fixture:NUnit.Tests.AssertionTests nunit.tests.dll</pre>
+	<pre class="highlight" class="programtext">        nunit-console /fixture:NUnit.Tests.AssertionTests nunit.tests.dll</pre>
 </p>
 <p>The name specified after the <b>/fixture</b> option may be that of a TestFixture 
 	class, a legacy suite (using the Suite property ) or a namespace. If a 
@@ -70,7 +70,7 @@ but a simpler method is available.
     to be used in executing tests. If that version specified is different from the
     one being used by NUnit, the tests are run in a separate process. For example,
     you may enter
-    <pre class="programtext">        nunit-console myassembly.dll /framework:net-1.1</pre>
+    <pre class="highlight" class="programtext">        nunit-console myassembly.dll /framework:net-1.1</pre>
 </p>
 	
 <p>This command will run tests under .NET 1.1 even if you are running the .NET 2.0
@@ -82,11 +82,11 @@ but a simpler method is available.
 	one or more categories. Categories may be included or excluded in a test run 
 	using the <b>/include</b> and <b>/exclude</b> options. The following command 
 	runs only the tests in the BaseLine category:
-	<pre class="programtext">        nunit-console myassembly.dll /include:BaseLine</pre>
+	<pre class="highlight" class="programtext">        nunit-console myassembly.dll /include:BaseLine</pre>
 </p>
 <p>The following command runs all tests <b>except</b> those in the Database 
 	category:
-	<pre class="programtext">        nunit-console myassembly.dll /exclude:Database</pre>
+	<pre class="highlight" class="programtext">        nunit-console myassembly.dll /exclude:Database</pre>
 </p>
 <p>
 Multiple categories may be specified on either option, by using commas to 
@@ -137,10 +137,10 @@ the shell you are using.
 <p>Output created by the test, which is normally shown on the console, may be 
     redirected to a file. The following command redirects standard output to the 
 	file TestResult.txt:
-	<pre class="programtext">        nunit-console nunit.tests.dll /out:TestResult.txt</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.dll /out:TestResult.txt</pre>
 </p>
 <p>The following command redirects standard error output to the StdErr.txt file.
-	<pre class="programtext">        nunit-console nunit.tests.dll /err:StdErr.txt</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.dll /err:StdErr.txt</pre>
 </p>
 
 <p><b>Note:</b>This option only redirects output produced <b>by the tests</b>,
@@ -158,7 +158,7 @@ the shell you are using.
 <p>As stated above, the console program always creates an XML representation of the 
 	test results. To change the name of the output file to 
 	&quot;console-test.xml&quot; use the following command line option:
-	<pre class="programtext">        nunit-console /xml:console-test.xml nunit.tests.dll</pre>
+	<pre class="highlight" class="programtext">        nunit-console /xml:console-test.xml nunit.tests.dll</pre>
 </p>
 <p><b>Note:</b> For additional information see the XML schema for the test results. 
 	This file is in the same directory as the executable and is called
@@ -170,7 +170,7 @@ the shell you are using.
 	configuration loaded may be controlled by using the <b>/config</b> switch. The 
 	following will load and run tests for the Release configuration of 
 	nunit.tests.dll.
-	<pre class="programtext">        nunit-console nunit.tests.csproj /config:Release</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.csproj /config:Release</pre>
 </p>
 <p><b>Note:</b> This option has no effect when loading an assembly directly.</p>
 <h4>Specifying Multiple Assemblies</h4>
@@ -178,7 +178,7 @@ the shell you are using.
 	interface even if you have not defined an NUnit test project file. The 
 	following command would run a suite of tests contained in assembly1.dll, 
 	assembly2.dll and assembly3.dll.
-	<pre class="programtext">        nunit-console assembly1.dll assembly2.dll assembly3.dll</pre>
+	<pre class="highlight" class="programtext">        nunit-console assembly1.dll assembly2.dll assembly3.dll</pre>
 </p>
 <p><b>Notes:</b> You may specify multiple assemblies, but not multiple NUnit or 
 	Visual Studio projects on the command line. Further, you may not specify an 

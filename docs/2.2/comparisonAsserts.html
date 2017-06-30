@@ -8,7 +8,7 @@ layout: help
 	report both expected and actual values. The expected value is always the first 
 	argument. NUnit provides the following comparison asserts:</p>
 <div class="code" style="width: 36em" >
-	<pre class="prettyprint">Assert.AreEqual( int expected, int actual );
+	<pre class="highlight" class="prettyprint">Assert.AreEqual( int expected, int actual );
 Assert.AreEqual( int expected, int actual, string message );
 Assert.AreEqual( int expected, int actual, string message, 
                  object[] parms );
@@ -46,7 +46,7 @@ Assert.AreSame( object expected, object actual, string message,
 	the overload that compares two objects makes special provisions so that numeric 
 	values of different types compare as expected. This makes it possible for 
 	asserts like the following to succeed:
-	<pre class="prettyprint">        Assert.AreEqual( 5, 5.0 )</pre>
+	<pre class="highlight" class="prettyprint">        Assert.AreEqual( 5, 5.0 )</pre>
 </p>
 <p>Starting with version 2.2, special provision is also made for comparing single-dimensioned
 	arrays. Two arrays will be treated as equal by Assert.AreEqual if they are the same 

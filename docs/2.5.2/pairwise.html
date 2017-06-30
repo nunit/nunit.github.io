@@ -16,7 +16,7 @@ layout: help
 <p>Using the Combinatorial attribute, the following test would be executed 12 (3x2x2) times.
    With <b>Pairwise</b> it is executed only enough times so that each possible pair is covered..
 
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 [Test, Pairwise]
 public void MyTest(
     [Values("a", "b", "c")] string a,
@@ -29,7 +29,7 @@ public void MyTest(
 
 <p>For this test, NUnit currently calls the method seven times, producing the following output:
 
-<pre>
+<pre class="highlight">
 	a - x
 	b + y
 	c + x

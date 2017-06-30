@@ -12,13 +12,13 @@ of a parameterized test method.
 <h4>Extension Point</h4>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	IExtensionPoint listeners = host.GetExtensionPoint( "DataPointProviders" );</pre>
 
 <h4>Interface</h4>
 <p>The extension object passed to Install must implement the IDataPointProvider interface:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	public interface IDataPointProvider
 	{
 		bool HasDataFor( ParameterInfo parameter );

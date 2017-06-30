@@ -51,7 +51,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="prettyprint cs">namespace NUnit.Tests
+<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -64,7 +64,7 @@ layout: help
 }
 </pre>
 
-<pre class="prettyprint vb">Imports System
+<pre class="highlight" class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -75,7 +75,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -95,7 +95,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="prettyprint js">package NUnit.Tests;
+<pre class="highlight" class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -134,7 +134,7 @@ this situation should generally be avoided.
 This permits code like the following, which would cause an error if the
 attribute on the base class were not ignored.
 
-<div class="code"><pre class="prettyprint">[TestFixture]
+<div class="code"><pre class="highlight" class="prettyprint">[TestFixture]
 public class AbstractFixtureBase
 {
     ...
@@ -166,7 +166,7 @@ public class DerivedFixture&lt;T&gt; : AbstractFixtureBase
    that there are three different constructors, matching the data types
    provided as arguments.
    
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 [TestFixture("hello", "hello", "goodbye")]
 [TestFixture("zip", "zip")]
 [TestFixture(42, 42, 99)]
@@ -225,7 +225,7 @@ public class ParameterizedTestFixture
 <p>The following test fixture would be instantiated by NUnit twice,
    once using an ArrayList and once using a List&lt;int&gt;.
    
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 [TestFixture(typeof(ArrayList))]
 [TestFixture(typeof(List&lt;int&gt;))]
 public class IList_Tests&lt;TList&gt; where TList : IList, new()
@@ -257,7 +257,7 @@ public class IList_Tests&lt;TList&gt; where TList : IList, new()
 	   any remaining arguments are used to construct the instance. In the
 	   following example, this leads to some obvious duplication...
 
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 [TestFixture(typeof(double), typeof(int), 100.0, 42)]
 [TestFixture(typeof(int) typeof(double), 42, 100.0)]
 public class SpecifyBothSetsOfArgs&lt;T1, T2&gt;
@@ -284,7 +284,7 @@ public class SpecifyBothSetsOfArgs&lt;T1, T2&gt;
 	   arguments. Again, for this example, the type info is duplicated, but
 	   it is at least more cleanly separated from the normal arguments...
 
-<div class="code" style="width: 40em"><pre class="prettyprint">
+<div class="code" style="width: 40em"><pre class="highlight" class="prettyprint">
 [TestFixture(100.0, 42, TypeArgs=new Type[] {typeof(double), typeof(int) } )]
 [TestFixture(42, 100.0, TypeArgs=new Type[] {typeof(int), typeof(double) } )]
 public class SpecifyTypeArgsSeparately&lt;T1, T2&gt;
@@ -311,7 +311,7 @@ public class SpecifyTypeArgsSeparately&lt;T1, T2&gt;
 	   That's the case here and the following is the preferred way to
 	   write this example...
    
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 [TestFixture(100.0, 42)]
 [TestFixture(42, 100.0)]
 public class DeduceTypeArgsFromArgs&lt;T1, T2&gt;

@@ -18,7 +18,7 @@ of standard NUnit messages.</p>
 <p>The standard NUnit Asserts create an object known as an <b>asserter</b> and
 pass it to the <b>DoAssert</b> method, which includes code similar to this...
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	if ( !asserter.Test() )
 		throw new AssertionException( asserter.Message );
 </pre></p>
@@ -27,7 +27,7 @@ pass it to the <b>DoAssert</b> method, which includes code similar to this...
 objects being compared. They implement the <b>IAsserter</b> interface, 
 defined as follows:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	public interface IAsserter
 	{
 		// Test the condition for the assertion.

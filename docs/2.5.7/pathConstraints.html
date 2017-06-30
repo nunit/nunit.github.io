@@ -24,23 +24,23 @@ layout: help
 <p>Tests that two paths are equivalent.
 
 <h4>Constructor</h4>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 SamePathConstraint( string expectedPath )
 </pre></div>
 
 <h4>Syntax</h4>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 Is.SamePath( string expectedPath )
 </pre></div>
 
 <h4>Modifiers</h4>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 ...IgnoreCase
 ...RespectCase
 </pre></div>
 
 <h4>Examples of Use</h4>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 Assert.That( "/folder1/./junk/../folder2", 
 	Is.SamePath( "/folder1/folder2" ) );
 Assert.That( "/folder1/./junk/../folder2/x", 
@@ -58,24 +58,24 @@ Assert.That( "/folder1/folder2",
 <p>Tests that one path is equivalent another path or that it is under it.
 
 <h4>Constructor</h4>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 SamePathOrUnderConstraint( string expectedPath )
 </pre></div>
 
 <h4>Syntax</h4>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 Is.SamePathOrUnder( string expectedPath )
 </pre></div>
 
 <h4>Modifiers</h4>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 ...IgnoreCase
 ...RespectCase
 </pre></div>
 
 <h4>Examples of Use</h4>
 
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 Assert.That( "/folder1/./junk/../folder2", 
 	Is.SamePathOrUnder( "/folder1/folder2" ) );
 Assert.That( "/folder1/junk/../folder2/./folder3",

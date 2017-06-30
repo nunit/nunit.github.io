@@ -12,13 +12,13 @@ uses a SuiteBuilder to recognize and build TestFixtures.
 <h4>Extension Point</h4>
 <p>An addin may use the host to access this extension point by name:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	IExtensionPoint suiteBuilders = host.GetExtensionPoint( "SuiteBuilders" );</pre>
 
 <h4>Interface</h4>
 <p>The extension object passed to Install must implement the ISuiteBuilder interface:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	public interface ISuiteBuilder
 	{
 		bool CanBuildFrom( Type type );

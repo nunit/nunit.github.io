@@ -12,7 +12,7 @@ layout: help
    invoking that method. Here is an example of a test being run three
    times, with three different sets of data:
    
-<div class="code"><pre class="prettyprint">[TestCase(12,3,4)]
+<div class="code"><pre class="highlight" class="prettyprint">[TestCase(12,3,4)]
 [TestCase(12,2,6)]
 [TestCase(12,4,3)]
 public void DivideTest(int n, int d, int q)
@@ -35,7 +35,7 @@ The method may optionally be marked with the
 <p>By using the named parameter <b>Result</b> this test set may be simplified
 further:
 
-<div class="code"><pre class="prettyprint">[TestCase(12,3, Result=4)]
+<div class="code"><pre class="highlight" class="prettyprint">[TestCase(12,3, Result=4)]
 [TestCase(12,2, Result=6)]
 [TestCase(12,4, Result=3)]
 public int DivideTest(int n, int d)

@@ -18,7 +18,7 @@ layout: help
    
 <p>RangeAttribute supports the following constructors:
 
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 public RangeAttribute( int from, int to );
 public RangeAttribute( int from, int to, int step );
 public RangeAttribute( long from, long to, long step );
@@ -29,7 +29,7 @@ public RangeAttribute( double from, double to, double step );
 <h4>Example</h4>
 
 <p>The following test will be executed nine times, as follows:
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	MyTest(1, 0.2)
 	MyTest(1, 0.4)
 	MyTest(1, 0.6)
@@ -40,7 +40,7 @@ public RangeAttribute( double from, double to, double step );
 	MyTest(3, 0.4)
 	MyTest(3, 0.6)
 </pre>
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 [Test]
 public void MyTest(
     [Values(1,2,3) int x,

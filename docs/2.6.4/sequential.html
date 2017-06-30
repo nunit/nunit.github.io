@@ -20,7 +20,7 @@ data attribute on each parameter.
 
 <p>The following test will be executed three times.
 
-<div class="code"><pre class="prettyprint">
+<div class="code"><pre class="highlight" class="prettyprint">
 [Test, Sequential]
 public void MyTest(
     [Values(1,2,3)] int x,
@@ -32,7 +32,7 @@ public void MyTest(
 
 <p>MyTest is called three times, as follows:
 
-<pre>
+<pre class="highlight">
 	MyTest(1, "A")
 	MyTest(2, "B")
 	MyTest(3, null)

@@ -14,10 +14,10 @@ layout: help
 	the config file for the test.</p>
 	
 <p>Prior to NUnit 2.5, the signature for a test method was:
-	<pre class="prettyprint">        public void MethodName()</pre></p>
+	<pre class="highlight" class="prettyprint">        public void MethodName()</pre></p>
 	
 <p>Beginning with NUnit 2.5, static methods may be used as tests:
-	<pre class="prettyprint">        public static void MethodName()</pre></p>
+	<pre class="highlight" class="prettyprint">        public static void MethodName()</pre></p>
 	
 <p>In addition, with 2.5, test methods may have arguments and return
    values, provided that NUnit is told what values to use for the
@@ -57,7 +57,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="prettyprint cs">namespace NUnit.Tests
+<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -74,7 +74,7 @@ layout: help
 }
 </pre>
 
-<pre class="prettyprint vb">Imports System
+<pre class="highlight" class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -87,7 +87,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -107,7 +107,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="prettyprint js">package NUnit.Tests;
+<pre class="highlight" class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;

@@ -12,14 +12,14 @@ TestCaseBuilders internally to create various kinds of TestMethods.
 <h4>Extension Point</h4>
 Addins use the host to access this extension point by name:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	IExtensionPoint testCaseBuilders = host.GetExtensionPoint( "TestCaseBuilders" );</pre>
 
 <h4>Interfaces</h4>
 <p>The extension object passed to Install must implement either the ITestCaseBuilder 
 or the ITestCaseBuilder2 interface:
 
-<pre class="prettyprint">
+<pre class="highlight" class="prettyprint">
 	public interface ITestCaseBuilder
 	{
 		bool CanBuildFrom( MethodInfo method );

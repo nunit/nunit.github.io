@@ -11,17 +11,17 @@ layout: help
    method.
    
 <p>Here's a very simple assert using the constraint model:
-<pre class="prettyprint">      Assert.That( myString, Is.EqualTo("Hello") );</pre>
+<pre class="highlight" class="prettyprint">      Assert.That( myString, Is.EqualTo("Hello") );</pre>
 
 <p>The second argument in this assertion uses one of NUnit's <b>syntax helpers</b>
 to create an <b>EqualConstraint</b>. The same assertion could also be made in this form:
-<pre class="prettyprint">      Assert.That( myString, new EqualConstraint("Hello") );</pre>
+<pre class="highlight" class="prettyprint">      Assert.That( myString, new EqualConstraint("Hello") );</pre>
 
 <p>Using this model, all assertions are made using one of the forms of the
    Assert.That() method, which has a number of overloads...
    
 <div class="code" style="width: 36em">
-<pre class="prettyprint">Assert.That( object actual, IConstraint constraint )
+<pre class="highlight" class="prettyprint">Assert.That( object actual, IConstraint constraint )
 Assert.That( object actual, IConstraint constraint, string message )
 Assert.That( object actual, IConstraint constraint, string message, 
              object[] parms )
@@ -35,7 +35,7 @@ Assert.That( bool condition, string message, object[] parms );</pre>
 Expect() method may be used in place of Assert.That()...
 
 <div class="code" style="width: 36em">
-<pre class="prettyprint">Expect( object actual, IConstraint constraint )
+<pre class="highlight" class="prettyprint">Expect( object actual, IConstraint constraint )
 Expect( object actual, IConstraint constraint, string message )
 Expect( object actual, IConstraint constraint, string message, 
              object[] parms )

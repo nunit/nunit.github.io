@@ -16,20 +16,20 @@ layout: help
 <h4>Specifying an Assembly</h4>
 The console program must always have an assembly or project specified. To run 
 the tests contained in the nunit.tests.dll use the following command:
-<pre class="programtext">        nunit-console nunit.tests.dll</pre>
+<pre class="highlight" class="programtext">        nunit-console nunit.tests.dll</pre>
 </p>
 <p>To run the tests in nunit.tests.dll through the Visual Studio project, use:
-	<pre class="programtext">        nunit-console nunit.tests.csproj</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.csproj</pre>
 </p>
 <p>To run the same tests through an NUnit test project you have defined, use:
-	<pre class="programtext">        nunit-console nunit.tests.nunit</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.nunit</pre>
 </p>
 <h4>Specifying an Assembly and a Fixture</h4>
 <p>When specifying a fixture, you must give the full name of the test fixture 
 	along with the containing assembly. For example, to run the 
 	NUnit.Tests.AssertionTests in the nunit.tests.dll assembly use the following 
 	command:
-	<pre class="programtext">        nunit-console /fixture:NUnit.Tests.AssertionTests nunit.tests.dll</pre>
+	<pre class="highlight" class="programtext">        nunit-console /fixture:NUnit.Tests.AssertionTests nunit.tests.dll</pre>
 </p>
 <p>The name specified after the <b>/fixture</b> option may be that of a TestFixture 
 	class, a legacy suite (using the Suite property ) or a namespace. If a 
@@ -50,7 +50,7 @@ command to specify the version under which NUnit should run.</p>
 <p>For example, to run the tests in nunit.tests.dll under the RTM version of 
 the .Net 2.0 framework, use:</p>
 
-<pre class="programtext">       clr net-2.0 nunit-console nunit.tests.dll</pre>
+<pre class="highlight" class="programtext">       clr net-2.0 nunit-console nunit.tests.dll</pre>
 
 <p>The <b>clr.bat</b> file is located in the NUnit <b>bin</b> directory. You may
 put this on your path, or copy it to a convenient location. Enter <b>clr /?</b> 
@@ -68,11 +68,11 @@ to be used when running a command.</p>
 	one or more categories. Categories may be included or excluded in a test run 
 	using the <b>/include</b> and <b>/exclude</b> options. The following command 
 	runs only the tests in the BaseLine category:
-	<pre class="programtext">        nunit-console myassembly.dll /include:BaseLine</pre>
+	<pre class="highlight" class="programtext">        nunit-console myassembly.dll /include:BaseLine</pre>
 </p>
 <p>The following command runs all tests <b>except</b> those in the Database 
 	category:
-	<pre class="programtext">        nunit-console myassembly.dll /exclude:Database</pre>
+	<pre class="highlight" class="programtext">        nunit-console myassembly.dll /exclude:Database</pre>
 </p>
 <p>
 Multiple categories may be specified on either option, by using commas to 
@@ -87,10 +87,10 @@ separate them.
 	This includes output created by the test program as well as what NUnit itself 
 	creates. The following command redirects standard output to the TestResult.txt 
 	file:
-	<pre class="programtext">        nunit-console nunit.tests.dll /out:TestResult.txt</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.dll /out:TestResult.txt</pre>
 </p>
 <p>The following command redirects standard error output to the StdErr.txt file.
-	<pre class="programtext">        nunit-console nunit.tests.dll /err:StdErr.txt</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.dll /err:StdErr.txt</pre>
 </p>
 <h4>Labeling Test Output</h4>
 <p>The output from each test normally follows right after that of the preceding 
@@ -100,7 +100,7 @@ separate them.
 <p>As stated above, the console program always creates an XML representation of the 
 	test results. To change the name of the output file to 
 	&quot;console-test.xml&quot; use the following command line option:
-	<pre class="programtext">        nunit-console /xml:console-test.xml nunit.tests.dll</pre>
+	<pre class="highlight" class="programtext">        nunit-console /xml:console-test.xml nunit.tests.dll</pre>
 </p>
 <h4>Specifying the Transform file</h4>
 <p>The console interface uses XSLT to transform the test results from the XML file 
@@ -108,7 +108,7 @@ separate them.
 	interface has a default transformation that is part of the executable. To 
 	specify your own transformation named &quot;myTransform.xslt&quot; use the 
 	following command line option:
-	<pre class="programtext">        nunit-console /transform:myTransform.xslt nunit.tests.dll</pre>
+	<pre class="highlight" class="programtext">        nunit-console /transform:myTransform.xslt nunit.tests.dll</pre>
 </p>
 <p><b>Note:</b> For additional information see the XML schema for the test results. 
 	This file is in the same directory as the executable and is called
@@ -120,7 +120,7 @@ separate them.
 	configuration loaded may be controlled by using the <b>/config</b> switch. The 
 	following will load and run tests for the Release configuration of 
 	nunit.tests.dll.
-	<pre class="programtext">        nunit-console nunit.tests.csproj /config:Release</pre>
+	<pre class="highlight" class="programtext">        nunit-console nunit.tests.csproj /config:Release</pre>
 </p>
 <p><b>Note:</b> This option has no effect when loading an assembly directly.</p>
 <h4>Specifying Multiple Assemblies</h4>
@@ -128,7 +128,7 @@ separate them.
 	interface even if you have not defined an NUnit test project file. The 
 	following command would run a suite of tests contained in assembly1.dll, 
 	assembly2.dll and assembly3.dll.
-	<pre class="programtext">        nunit-console assembly1.dll assembly2.dll assembly3.dll</pre>
+	<pre class="highlight" class="programtext">        nunit-console assembly1.dll assembly2.dll assembly3.dll</pre>
 </p>
 <p><b>Note:</b> You may specify multiple assemblies, but not multiple NUnit or 
 	Visual Studio projects on the command line. Further, you may not specify an 
