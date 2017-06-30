@@ -1,0 +1,80 @@
+<div id="help_content">
+
+<h3>TestCaseBuilders (NUnit 2.4)</h3>
+
+<h4>Purpose</h4>
+<p>TestCaseBuilders create Tests based on a MethodInfo. NUnit uses several
+TestCaseBuilders internally to create various kinds of TestMethods.
+
+<h4>Extension Point</h4>
+Addins use the host to access this extension point by name:
+
+<pre class="prettyprint">
+	IExtensionPoint testCaseBuilders = host.GetExtensionPoint( "TestCaseBuilders" );</pre>
+
+<h4>Interfaces</h4>
+<p>The extension object passed to Install must implement either the ITestCaseBuilder 
+or the ITestCaseBuilder2 interface:
+
+<pre class="prettyprint">
+	public interface ITestCaseBuilder
+	{
+		bool CanBuildFrom( MethodInfo method );
+		Test BuildFrom( MethodInfo method );
+	}
+
+	public interface ITestCaseBuilder2 : ITestCaseBuilder
+	{
+		bool CanBuildFrom( MethodInfo method, Test suite );
+		Test BuildFrom( MethodInfo method, Test suite );
+	}
+</pre>
+
+<p>NUnit will call ITestCaseBuilder2 if it is available. Otherwise
+ITestCaseBuilder will be used.
+
+<p>The CanBuildFrom method should return true if the addin can build
+a test from the MethodInfo provided. Some TestCaseBuilder addins are only 
+intended to apply to methods within a specific type of fixture. The
+suite argument of the ITestCaseBuilder2 interface may be used to make
+this determination.
+
+<p>The BuildFrom method should return a test constructed over the MethodInfo
+provided as an argument or null if the method cannot be used.
+
+
+</div>
+
+<!-- Submenu -->
+<div id="subnav">
+<ul>
+<li><a href="docHome.html">NUnit 2.5.8</a></li>
+<ul>
+<li><a href="getStarted.html">Getting&nbsp;Started</a></li>
+<li><a href="assertions.html">Assertions</a></li>
+<li><a href="constraintModel.html">Constraints</a></li>
+<li><a href="attributes.html">Attributes</a></li>
+<li><a href="runningTests.html">Running&nbsp;Tests</a></li>
+<li><a href="extensibility.html">Extensibility</a></li>
+<ul>
+<li><a href="customConstraints.html">Custom&nbsp;Constraints</a></li>
+<li><a href="nunitAddins.html">NUnit&nbsp;Addins</a></li>
+<ul>
+<li><a href="suiteBuilders.html">SuiteBuilders</a></li>
+<li id="current"><a href="testcaseBuilders.html">TestcaseBuilders</a></li>
+<li><a href="testDecorators.html">TestDecorators</a></li>
+<li><a href="testcaseProviders.html">TestcaseProviders</a></li>
+<li><a href="datapointProviders.html">DatapointProviders</a></li>
+<li><a href="eventListeners.html">EventListeners</a></li>
+</ul>
+<li><a href="extensionTips.html">Tips&nbsp;for&nbsp;Extenders</a></li>
+</ul>
+<li><a href="releaseNotes.html">Release&nbsp;Notes</a></li>
+<li><a href="samples.html">Samples</a></li>
+<li><a href="license.html">License</a></li>
+</ul>
+</ul>
+</div>
+<!-- End of Submenu -->
+
+
