@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-// SASS Colors 
+// SASS Colors
 
 $color-primary-0: #005B0B;	// Main Primary color */
 $color-primary-1: #289336;
@@ -112,3 +112,52 @@ body {
   margin: 15px 0;
   color: lighten($gray-base, 77.7%);
 }
+
+div.code { width: 36em; margin: 0 0; padding: 0 0; position: relative; }
+div.langFilter { position: absolute; top: 100px; left: 5%; }
+div.code div.langFilter { position: absolute; top: -15px; left: 0;}
+div.dropdown { position: absolute; top: 0; left: 14px; padding: 0 10px; width: 20px;
+    text-align: left; border: 1px solid #888; background-color: #ffd; }
+div.lang div.dropdown { position: absolute; left: 14px; top: 0; padding: 0 10px; width: 20px;
+	text-align: left; border: 1px solid #888; background-color: #ffd; }
+div.notice {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    border: 1px solid goldenrod;
+    margin: 38px 0 0 0;
+    padding: 12px;
+    background-color: #FEEFB3;
+    color: #9F6000;
+    width: 60%;
+    max-width: 660px;
+}
+pre.prettyprint {
+ padding: 10px;
+ max-width: 660px;
+}
+
+/* Submenu */
+#subnav { position: absolute; top: 100px; left: 68%; background-color: #ffd;
+          width: 24%; margin: 1em 0 0; padding: .25em ; border: solid #ccc;
+          border-width: .1em .1em .1em .1em; }
+#subnav ul { margin: 0; padding: 0; list-style: none; }
+#subnav li{ margin: 0; padding: 2px 0 2px; }
+#subnav a { font: 1em "Times New Roman", Roman, serif; margin: 0; padding: 0 0 0 26px;
+  		text-transform: uppercase; text-decoration: none; color: #000; white-space: nowrap;
+  		background: url(img/bulletOff.gif) no-repeat 10px 50%; display: block}
+#subnav ul ul a { padding: 0 0 0 46px; background-position: 30px 50%; }
+#subnav ul ul ul a { padding: 0 0 0 66px; background-position: 50px 50%; }
+#subnav ul ul ul ul a { padding: 0 0 0 86px; background-position: 70px 50%; }
+#subnav ul ul ul ul ul a { padding: 0 0 0 106px; background-position: 90px 50%; }
+#subnav li#current a{ background-image: url(img/bulletOn.gif) }
+#subnav li a:hover { background-image: url(img/bulletOn.gif) }
+
+#help_content p {
+    padding: 0;
+    margin: 0 0 1em 0;
+    max-width: 660px;
+}
+
+ul.across { width: 100%; display: block; list-style: none; }
+ul.across li { float: left; display: block; width: 9em }
