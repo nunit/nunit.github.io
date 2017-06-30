@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script type="text/javascript">
+    location.queryString = {};
+    location.search.substr(1).split("&").forEach(function (pair) {
+        if (pair === "") return;
+        var parts = pair.split("=");
+        location.queryString[parts[0]] = parts[1] && decodeURIComponent(parts[1].replace(/\+/g, " "));
+    });
+
+    $(function () {
+        if (location.search && "p" in location.queryString && "r" in location.queryString) {
+            $("#not_found").hide();
+            $("#redirect").show();
+
+            var uri = "/docs/" + location.queryString.r + "/" + location.queryString.p + ".html";
+
+            $("#link").attr("href", uri);
+            $("#query").text(JSON.stringify(location.queryString, null, 2));
+            window.location.replace(uri);
+        } else {
+          $("#not_found").show();
+          $("#redirect").hide();
+        }
+    });
+    </script>
+
+  </body>
+</html>
