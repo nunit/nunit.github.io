@@ -24,7 +24,7 @@ If you are not sure where to report a particular problem, please ask! If you are
 - [NUnit Console Runner and Engine](http://github.com/nunit/nunit-console/issues)
 - [NUnit 3 VS Adapter](http://github.com/nunit/nunit3-vs-adapter/issues)
 - [NUnit Xamarin Runner](http://github.com/nunit/nunit.xamarin/issues)
-- [NUnit Templates](http://github.com/nunit/nunit.templates/issues)
+- [NUnit Templates](http://github.com/nunit/nunit-vs-templates/issues)
 - [NUnit VS Adapter](http://github.com/nunit/nunit-vs-adapter/issues)
 
 **Note:** Bugs are no longer accepted on the NUnit V2 and NUnitLite projects. NUnit V2 bugs should be filed against the most appropriate project above and we'll check to see the problem doesn't occur in NUnit 3. NUnitLite bugs should be filed against the NUnit Framework, noting that the bug was found in the nunitlite environment.
@@ -34,5 +34,4 @@ If you are not sure where to report a particular problem, please ask! If you are
 Start by joining the [nunit-developer list](http://groups.google.com/group/nunit-developer) and introducing yourself. This list is for development discussions about NUnit.
 It's open to everyone and is the best place to discuss your ideas or to learn how to contribute to NUnit.
 
-You can then read through our [contribution guidelines](https://github.com/nunit/nunit/blob/master/CONTRIBUTING.md) and our
-[developer wiki](https://github.com/nunit/dev/wiki) for more information on getting involved.
+You can then read through our [contribution guidelines](https://github.com/nunit/nunit/blob/master/CONTRIBUTING.md) for more information on getting involved.
