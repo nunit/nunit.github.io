@@ -16,8 +16,19 @@ You can make a donation easily through Paypal, by clicking on the 'Donate' butto
 
 We thank the following individuals and companies for their donations to the NUnit project.
 
+### 2017
+
+- Graham Wilson
+- Michal Bieszczad
+- Mighty IT (Pty) Ltd
+
 ### 2016
 
+- Ben Chenathara
+- John Burak
+- Himanshu Saxena
+- Dot Media
+- Yevgeniy Mayskiy
 - MacFarlane Physiotherapy, [www.macfarlanephysio.co.uk](http://www.macfarlanephysio.co.uk)
 - Dzmitry Lahoda
 - Righthand Miha Markic s.p.
