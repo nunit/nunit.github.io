@@ -7,14 +7,14 @@ layout: help
 
 <h3>TestFixtureTearDownAttribute (NUnit 2.1)</h3>
 
-<p>This attribute is used inside a TestFixture to provide a single set of 
-	functions that are performed once after all tests are completed. 
-	A TestFixture can have only one TestFixtureTearDown method. If more than 
-	one is defined the TestFixture will compile successfully but its tests will 
+<p>This attribute is used inside a TestFixture to provide a single set of
+	functions that are performed once after all tests are completed.
+	A TestFixture can have only one TestFixtureTearDown method. If more than
+	one is defined the TestFixture will compile successfully but its tests will
 	not run.</p>
 
-<p>So long as any TestFixtureSetUp method runs without error, the TestFixtureTearDown method is 
-   guaranteed to run. It will not run if a TestFixtureSetUp method fails or throws an 
+<p>So long as any TestFixtureSetUp method runs without error, the TestFixtureTearDown method is
+   guaranteed to run. It will not run if a TestFixtureSetUp method fails or throws an
    exception.</p>
 
 <h4>Example:</h4>
@@ -31,7 +31,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -51,7 +51,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" class="prettyprint vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -72,7 +72,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -95,7 +95,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" class="prettyprint js">package NUnit.Tests;
+<pre class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -122,10 +122,10 @@ public class SuccessTests
 
 <h4>Inheritance</h4>
 
-<p>The TestFixtureTearDown attribute is inherited from any base class. Therefore, if a base 
-	class has defined a TestFixtureTearDown method, that method will be called 
-	after each test method in the derived class. If you wish to add more 
-	functionality in a derived class you need to mark the method 
+<p>The TestFixtureTearDown attribute is inherited from any base class. Therefore, if a base
+	class has defined a TestFixtureTearDown method, that method will be called
+	after each test method in the derived class. If you wish to add more
+	functionality in a derived class you need to mark the method
 	with the appropriate attribute and then call the base class method.</p>
 
 <h4>See also...</h4>

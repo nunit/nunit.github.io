@@ -10,13 +10,13 @@ layout: help
    values are used. This is a well-known approach for combatting
    the combinatorial explosion of test cases when more than
    two features (parameters) are involved.
-   
+
 <h4>Example</h4>
 
 <p>Using the Combinatorial attribute, the following test would be executed 12 (3x2x2) times.
    With <b>Pairwise</b> it is executed only enough times so that each possible pair is covered..
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [Test, Pairwise]
 public void MyTest(
     [Values("a", "b", "c")] string a,
@@ -29,7 +29,7 @@ public void MyTest(
 
 <p>For this test, NUnit currently calls the method seven times, producing the following output:
 
-<pre class="highlight">
+<pre>
 	a - x
 	b + y
 	c + x
@@ -39,7 +39,7 @@ public void MyTest(
 	a + x
 </pre>
 
-<p>Note that this is not the optimal output. The pairs (a, -), (a, x), (+ x), (- x) and (- y)  
+<p>Note that this is not the optimal output. The pairs (a, -), (a, x), (+ x), (- x) and (- y)
 appear twice. NUnit uses a heuristic algorithm to reduce the number of test cases as much
 as it can. Improvements may be made in the future.
 
@@ -49,7 +49,7 @@ as it can. Improvements may be made in the future.
    possible combinations of arguments are valid. When multiple parameters
    use the same generic type (e.g.: T) this may not be possible and the
    attribute may generate invalid test cases.
-    
+
 <h4>See also...</h4>
 <ul>
 <li><a href="sequential.html">SequentialAttribute</a><li><a href="combinatorial.html">CombinatorialAttribute</a></ul>

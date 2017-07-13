@@ -30,10 +30,10 @@ layout: help
 
 <h3>SetUpAttribute (NUnit 2.0)</h3>
 
-<p>This attribute is used inside a TestFixture to provide a common set of 
-	functions that are performed just before each test method is called.  
-    A TestFixture can have only one SetUp method. If more than one is defined 
-	the TestFixture will compile successfully, but its tests will not run.</p 
+<p>This attribute is used inside a TestFixture to provide a common set of
+	functions that are performed just before each test method is called.
+    A TestFixture can have only one SetUp method. If more than one is defined
+	the TestFixture will compile successfully, but its tests will not run.</p
 
 <h4>Example:</h4>
 
@@ -49,7 +49,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" id="CS1" style="display:">namespace NUnit.Tests
+<pre id="CS1" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -69,7 +69,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" id="VB1" style="display:none">Imports System
+<pre id="VB1" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -90,7 +90,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -113,7 +113,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" id="JS1" style="display:none">package NUnit.Tests;
+<pre id="JS1" style="display:none">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -140,12 +140,12 @@ public class SuccessTests
 
 <h4>SetUp Inheritance</h4>
 
-<p>The SetUp attribute is inherited from any base class. Therefore, if a base 
-	class has defined a SetUp method, that method will be called 
-	before each test method in the derived class. If you wish to add more 
-	SetUp functionality in a derived class you need to mark the method 
+<p>The SetUp attribute is inherited from any base class. Therefore, if a base
+	class has defined a SetUp method, that method will be called
+	before each test method in the derived class. If you wish to add more
+	SetUp functionality in a derived class you need to mark the method
 	with the appropriate attribute and then call the base class method.</p>
-	
+
 </div>
 
 <!-- Submenu -->

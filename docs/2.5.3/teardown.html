@@ -7,20 +7,20 @@ layout: help
 
 <h3>TearDownAttribute (NUnit 2.0 / 2.5)</h3>
 
-<p>This attribute is used inside a <a href="testFixture.html">TestFixture</a>  to provide a common set of functions that are performed after each test method. 
+<p>This attribute is used inside a <a href="testFixture.html">TestFixture</a>  to provide a common set of functions that are performed after each test method.
   It is	also used inside a <a href="setupFixture.html">SetUpFixture</a></b>,
   where it provides the same functionality at the level of a namespace or assembly.
-    
+
 <p><b>Before NUnit 2.5</b>, a class could have only one TearDown method
-	and it was required to be an instance method. 
-	
+	and it was required to be an instance method.
+
 <p><b>Beginning with NUnit 2.5</b>, TearDown methods may be either static or
    instance methods and you may define more than one of them in a fixture.
    Normally, multiple TearDown methods are only defined at different levels
    of an inheritance hierarchy, as explained below.
 
-<p>So long as any SetUp method runs without error, the TearDown method is 
-   guaranteed to run. It will not run if a SetUp method fails or throws an 
+<p>So long as any SetUp method runs without error, the TearDown method is
+   guaranteed to run. It will not run if a SetUp method fails or throws an
    exception.</p>
 
 <h4>Example:</h4>
@@ -37,7 +37,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -57,7 +57,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" class="prettyprint vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -78,7 +78,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -101,7 +101,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" class="prettyprint js">package NUnit.Tests;
+<pre class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -128,18 +128,18 @@ public class SuccessTests
 
 <h3>Inheritance</h3>
 
-<p>The TearDown attribute is inherited from any base class. Therefore, if a base 
-	class has defined a TearDown method, that method will be called 
-	after each test method in the derived class. 
-	
-<p>Before NUnit 2.5, you were permitted only one TearDown method. If you wanted to 
-   have some TearDown functionality in the base class and add more in the derived 
+<p>The TearDown attribute is inherited from any base class. Therefore, if a base
+	class has defined a TearDown method, that method will be called
+	after each test method in the derived class.
+
+<p>Before NUnit 2.5, you were permitted only one TearDown method. If you wanted to
+   have some TearDown functionality in the base class and add more in the derived
    class you needed to call the base class method yourself.
-	
+
 <p>With NUnit 2.5, you can achieve the same result by defining a TearDown method
    in the base class and another in the derived class. NUnit will call base
    class TearDown methods after those in the derived classes.
-   
+
 <p><b>Note:</b> Although it is possible to define multiple TearDown methods
    in the same class, you should rarely do so. Unlike methods defined in
    separate classes in the inheritance hierarchy, the order in which they

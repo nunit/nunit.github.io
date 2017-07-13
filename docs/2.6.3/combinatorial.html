@@ -9,12 +9,12 @@ layout: help
    generate test cases for all possible combinations of the individual
    data items provided for the parameters of a test. Since this is the
    default, use of this attribute is optional.
-   
+
 <h4>Example</h4>
 
 <p>The following test will be executed six times:
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [Test, Combinatorial]
 public void MyTest(
     [Values(1,2,3)] int x,
@@ -25,7 +25,7 @@ public void MyTest(
 </pre></div>
 
 MyTest is called six times, as follows:
-<pre class="highlight">
+<pre>
 	MyTest(1, "A")
 	MyTest(1, "B")
 	MyTest(2, "A")
@@ -40,7 +40,7 @@ MyTest is called six times, as follows:
    possible combinations of arguments are valid. When multiple parameters
    use the same generic type (e.g.: T) this may not be possible and the
    attribute may generate invalid test cases.
-    
+
 <h4>See also...</h4>
 <ul>
 <li><a href="sequential.html">SequentialAttribute</a><li><a href="pairwise.html">PairwiseAttribute</a></ul>

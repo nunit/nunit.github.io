@@ -8,10 +8,10 @@ layout: help
 <h3>ValueSourceAttribute (NUnit 2.5)</h3>
 
 <p><b>ValueSourceAttribute</b> is used on individual parameters of a test method to
-identify a named source for the argument values to be supplied. The attribute has 
+identify a named source for the argument values to be supplied. The attribute has
 two public constructors.
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 ValueSourceAttribute(Type sourceType, string sourceName);
 ValueSourceAttribute(string sourceName);
 </pre>
@@ -22,10 +22,10 @@ the data. It must have a default constructor.
 
 <p>If <b>sourceType</b> is not specified, the class containing the test
 method is used. NUnit will construct it using either the default constructor
-or - if arguments are provided - the appropriate constructor for those 
+or - if arguments are provided - the appropriate constructor for those
 arguments.
 
-<p>The <b>sourceName</b>, represents the name of the source that will 
+<p>The <b>sourceName</b>, represents the name of the source that will
 provide the arguments. It should have the following characteristics:
 <ul>
 <li>It may be a field, a non-indexed property or a method taking no arguments.
@@ -36,14 +36,14 @@ provide the arguments. It should have the following characteristics:
 </ul>
 
 <p>NUnit locates value sources at the time the tests are loaded, creates
-instances of each class having non-static sources and builds a list of 
+instances of each class having non-static sources and builds a list of
 tests to be executed. Each instance is only created once at this
 time and is destroyed after all tests are loaded. In the case of sources
 located within the same class as the tests, a different instance is created
 each time the test is run, so no communication is possible using non-static
 members of the class.
 
-   
+
 
 </div>
 

@@ -8,40 +8,40 @@ layout: help
 <p>The Assert.Throws method is pretty much in a class by itself. Rather than
    comparing values, it attempts to invoke a code snippet, represented as
    a delegate, in order to verify that it throws a particular exception.
-   
+
 <p>It's also in a class by itself in that it returns an Exception, rather
     than void, if the Assert is successful. See the example below for
 	a few ways to use this.
-   
+
 <p>Assert.Throws may be used with a constraint argument, which is applied
    to the actual exception thrown, or with the Type of exception expected.
    The Type format is available in both both a non-generic and (in the .NET 2.0 version)
    generic form.
-   
+
 <p>Assert.DoesNotThrow simply verifies that the delegate does not throw
    an exception.
-   
-<div class="code"><pre class="highlight" class="prettyprint">
+
+<div class="code"><pre class="prettyprint">
 Assert.Throws( Type expectedExceptionType, TestDelegate code );
-Assert.Throws( Type expectedExceptionType, TestDelegate code, 
+Assert.Throws( Type expectedExceptionType, TestDelegate code,
 		string message );
-Assert.Throws( Type expectedExceptionType, TestDelegate code, 
+Assert.Throws( Type expectedExceptionType, TestDelegate code,
 		string message, params object[] parms);
 
 Assert.Throws( IResolveConstraint constraint, TestDelegate code );
-Assert.Throws( IResolveConstraint constraint, TestDelegate code, 
+Assert.Throws( IResolveConstraint constraint, TestDelegate code,
 		string message );
-Assert.Throws( IResolveConstraint constraint, TestDelegate code, 
+Assert.Throws( IResolveConstraint constraint, TestDelegate code,
 		string message, params object[] parms);
 
 Assert.Throws&lt;T&gt;( TestDelegate code );
 Assert.Throws&lt;T&gt;( TestDelegate code, string message );
-Assert.Throws&lt;T&gt;( TestDelegate code, string message, 
+Assert.Throws&lt;T&gt;( TestDelegate code, string message,
 		params object[] parms);
-		
+
 Assert.DoesNotThrow( TestDelegate code );
 Assert.DoesNotThrow( TestDelegate code, string message );
-Assert.DoesNotThrow( TestDelegate code, string message, 
+Assert.DoesNotThrow( TestDelegate code, string message,
         params object[] parms);
 </pre></div>
 
@@ -52,7 +52,7 @@ in question. Under .NET 2.0, this may be an anonymous delegate.
 <p>The following example includes four equivalent ways of writing the
 same test.
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class AssertThrowsTests
 {
@@ -61,17 +61,17 @@ public class AssertThrowsTests
   {
     Assert.Throws( typeof(ArgumentException),
       new TestDelegate(MethodThatThrows) );
-	  
+
     Assert.Throws&lt;ArgumentException&gt;(
       new TestDelegate(MethodThatThrows) );
-	  
+
     Assert.Throws( typeof(ArgumentException),
       delegate { throw new ArgumentException(); } );
-	  
+
     Assert.Throws&lt;ArgumentException&gt;(
       delegate { throw new ArgumentException(); } );
   }
-  
+
   void MethodThatThrows()
   {
     throw new ArgumentException();
@@ -82,7 +82,7 @@ public class AssertThrowsTests
 <p>This example shows use of the return value to perform
 additional verification of the exception.
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class UsingReturnValue
 {
@@ -92,14 +92,14 @@ public class UsingReturnValue
     MyException ex = Assert.Throws&lt;MyException&gt;(
       delegate { throw new MyException( "message", 42 ); } );
     Assert.That( ex.Message, Is.EqualTo( "message" ) );
-    Assert.That( ex.MyParam, Is.EqualTo( 42 ) ); 
+    Assert.That( ex.MyParam, Is.EqualTo( 42 ) );
   }
 </pre></div>
 
 <p>This example does the same thing
 using the overload that includes a constraint.
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [TestFixture]
 public class UsingConstraint
 {
@@ -122,7 +122,7 @@ that exact type to be thrown. If you want to test for any
 derived Type, use a constraint. See the following code for
 examples:
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 // Require an ApplicationException - derived types fail!
 Assert.Throws( typeof(ApplicationException), code );
 Assert.Throws&lt;ApplicationException&gt;()( code );

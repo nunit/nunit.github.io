@@ -12,13 +12,13 @@ of a parameterized test method.
 <h4>Extension Point</h4>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	IExtensionPoint listeners = host.GetExtensionPoint( "DataPointProviders" );</pre>
 
 <h4>Interface</h4>
 <p>The extension object passed to Install must implement the IDataPointProvider interface:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface IDataPointProvider
 	{
 		bool HasDataFor( ParameterInfo parameter );
@@ -27,7 +27,7 @@ of a parameterized test method.
 </pre>
 
 <p>The HasDataFor method should return true if the provider is able to
-   supply data for the specified parameter. If a provider only wants to be used 
+   supply data for the specified parameter. If a provider only wants to be used
    on certain types of tests, it can examine the supplied ParameterInfo and
    its associated MethodInfo and Type.
 

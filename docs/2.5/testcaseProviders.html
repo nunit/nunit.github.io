@@ -12,13 +12,13 @@ specific test cases that will be used in calling the test.
 <h4>Extension Point</h4>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	IExtensionPoint listeners = host.GetExtensionPoint( "ParameterProviders" );</pre>
 
 <h4>Interface</h4>
 <p>The extension object passed to Install must implement the ITestCaseProvider interface:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface ITestCaseProvider
 	{
 		bool HasTestCasesFor( MethodInfo method );
@@ -27,14 +27,14 @@ specific test cases that will be used in calling the test.
 </pre>
 
 <p>HasTestCasesFor returns true if the provider is able to supply test cases
-   for the specified method. If a provider only wants to be used on certain types 
+   for the specified method. If a provider only wants to be used on certain types
    of tests, it should examine the provided MethodInfo and return true or false
    based on what it finds.
 
 <p>The GetParametersFor method should return a list of individual test cases.
    Each test case may be expressed as a ParameterSet, as an array of arguments
    or as a custom object containing one or more of the following properties:
-   
+
    <ul>
    <li>Arguments
    <li>RunState
@@ -49,7 +49,7 @@ specific test cases that will be used in calling the test.
 
 <p>The ParameterSet class provides all these properties and may be used
 to avoid the overhead of reflecting on the properties.
-   
+
 
 </div>
 

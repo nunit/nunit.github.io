@@ -26,10 +26,10 @@ layout: help
 
 <h3>ExpectedExceptionAttribute (NUnit 2.0)</h3>
 
-<p>This is the way to specify that the execution of a test will throw an 
-	exception. This attribute takes a parameter which is a Type. The runner will 
-	execute the test and if it throws the specific exception, then the test passes. 
-	If it throws a different exception the test will fail. This is true even if the 
+<p>This is the way to specify that the execution of a test will throw an
+	exception. This attribute takes a parameter which is a Type. The runner will
+	execute the test and if it throws the specific exception, then the test passes.
+	If it throws a different exception the test will fail. This is true even if the
 	thrown exception inherits from the expected exception.</p>
 
 <h4>Example:</h4>
@@ -45,7 +45,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" id="CS1" style="display:">namespace NUnit.Tests
+<pre id="CS1" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -61,7 +61,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" id="VB1" style="display:none">Imports System
+<pre id="VB1" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -75,7 +75,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 

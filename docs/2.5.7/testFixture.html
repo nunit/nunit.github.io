@@ -7,10 +7,10 @@ layout: help
 
 <h3>TestFixtureAttribute (NUnit 2.0 / 2.5)</h3>
 
-<p>This is the attribute that marks a class that contains tests and, optionally, 
+<p>This is the attribute that marks a class that contains tests and, optionally,
 	setup or teardown methods. NUnit 2.5 introduces parameterized and generic
 	test fixtures - see below.</p>
-	
+
 <p>Most restrictions on a class that is used as a test fixture have now been
    eliminated. As of NUnit 2.5.3, a test fixture class:
 	<ul>
@@ -21,7 +21,7 @@ layout: help
 		<li>May not be abstract - although the attribute may be applied to an
 		    abstract class intended to serve as a base class for test fixtures.
 		<li>If no arguments are provided with the TestFixtureAttribute, the class
-		     must have a default constructor. 
+		     must have a default constructor.
 		<li>If arguments are provided, they must match one of the constructors.
 	</ul>
 </p>
@@ -29,12 +29,12 @@ layout: help
 <p>If any of these restrictions are violated, the class is not runnable
    as a test and will display as an error.</p>
 
-<p>It is advisable that the constructor not have any side effects, 
+<p>It is advisable that the constructor not have any side effects,
    since NUnit may construct the object multiple times in the course of a session.</li>
 
 <p>Beginning with NUnit 2.5, the <b>TestFixture</b> attribute is optional
    for non-parameterized, non-generic fixtures. So long as the class contains
-   at least one method marked with the <b>Test</b>, <b>TestCase</b> or 
+   at least one method marked with the <b>Test</b>, <b>TestCase</b> or
    <b>TestCaseSource</b> attribute, it will be treated as a test fixture.
 
 <h4>Example:</h4>
@@ -51,7 +51,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -64,7 +64,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" class="prettyprint vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -75,7 +75,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -95,7 +95,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" class="prettyprint js">package NUnit.Tests;
+<pre class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -118,11 +118,11 @@ so the well-known Abstract Fixture pattern may be implemented if desired.
 
 <p>In order to facilitate use of generic and/or parameterized classes,
 where the derived class may require a different number of arguments (or
-type arguments) from the base class, superfluous <b>TestFixture</b> 
+type arguments) from the base class, superfluous <b>TestFixture</b>
 attributes are ignored, using the following rules:
 
 <ol>
-<li>If all TestFixture attributes provide constructor or type arguments, 
+<li>If all TestFixture attributes provide constructor or type arguments,
 then all of them are used.
 <li>If some of the attributes provide arguments and others do not, then
 only those with arguments are used and those without arguments are ignored.
@@ -134,7 +134,7 @@ this situation should generally be avoided.
 This permits code like the following, which would cause an error if the
 attribute on the base class were not ignored.
 
-<div class="code"><pre class="highlight" class="prettyprint">[TestFixture]
+<div class="code"><pre class="prettyprint">[TestFixture]
 public class AbstractFixtureBase
 {
     ...
@@ -154,19 +154,19 @@ public class DerivedFixture&lt;T&gt; : AbstractFixtureBase
    Argument values are specified as arguments to the <b>TestFixture</b>
    attribute. NUnit will construct a separate instance of the fixture
    for each set of arguments.
-   
-<p>Individual fixture instances in a set of parameterized fixtures may be ignored. 
-   Set the <b>Ignore</b> named parameter of the attribute to true or set 
+
+<p>Individual fixture instances in a set of parameterized fixtures may be ignored.
+   Set the <b>Ignore</b> named parameter of the attribute to true or set
    <b>IgnoreReason</b> to a non-empty string.
-   
+
 <h4>Example</h4>
 
 <p>The following test fixture would be instantiated by NUnit three times,
    passing in each set of arguments to the appropriate constructor. Note
    that there are three different constructors, matching the data types
    provided as arguments.
-   
-<div class="code"><pre class="highlight" class="prettyprint">
+
+<div class="code"><pre class="prettyprint">
 [TestFixture("hello", "hello", "goodbye")]
 [TestFixture("zip", "zip")]
 [TestFixture(42, 42, 99)]
@@ -175,7 +175,7 @@ public class ParameterizedTestFixture
     private string eq1;
     private string eq2;
     private string neq;
-    
+
     public ParameterizedTestFixture(string eq1, string eq2, string neq)
     {
         this.eq1 = eq1;
@@ -214,18 +214,18 @@ public class ParameterizedTestFixture
 <h3>Generic Test Fixtures (NUnit 2.5)</h3>
 
 <p>Beginning with NUnit 2.5, you may also use a generic class as a test fixture.
-   In order for NUnit to instantiate the fixture, you must either specify the 
+   In order for NUnit to instantiate the fixture, you must either specify the
    types to be used as arguments to <b>TestFixtureAttribute</b> or use the
    named parameter <b>TypeArgs=</b> to specify them. NUnit will construct a
-   separate instance of the fixture for each <b>TestFixtureAttribute</b> 
+   separate instance of the fixture for each <b>TestFixtureAttribute</b>
    you provide.
-   
+
 <h4>Example</h4>
 
 <p>The following test fixture would be instantiated by NUnit twice,
    once using an ArrayList and once using a List&lt;int&gt;.
-   
-<div class="code"><pre class="highlight" class="prettyprint">
+
+<div class="code"><pre class="prettyprint">
 [TestFixture(typeof(ArrayList))]
 [TestFixture(typeof(List&lt;int&gt;))]
 public class IList_Tests&lt;TList&gt; where TList : IList, new()
@@ -249,7 +249,7 @@ public class IList_Tests&lt;TList&gt; where TList : IList, new()
 <h3>Generic Test Fixtures with Parameters (NUnit 2.5)</h3>
 
 <p>If a Generic fixture, uses constructor arguments, there are three
-   approaches to telling NUnit which arguments are type parameters 
+   approaches to telling NUnit which arguments are type parameters
    and which are normal constructor parameters.
    <ol>
    <li>Specify both sets of parameters as arguments to the <b>TestFixtureAttribute</b>.
@@ -257,7 +257,7 @@ public class IList_Tests&lt;TList&gt; where TList : IList, new()
 	   any remaining arguments are used to construct the instance. In the
 	   following example, this leads to some obvious duplication...
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [TestFixture(typeof(double), typeof(int), 100.0, 42)]
 [TestFixture(typeof(int) typeof(double), 42, 100.0)]
 public class SpecifyBothSetsOfArgs&lt;T1, T2&gt;
@@ -284,7 +284,7 @@ public class SpecifyBothSetsOfArgs&lt;T1, T2&gt;
 	   arguments. Again, for this example, the type info is duplicated, but
 	   it is at least more cleanly separated from the normal arguments...
 
-<div class="code" style="width: 40em"><pre class="highlight" class="prettyprint">
+<div class="code" style="width: 40em"><pre class="prettyprint">
 [TestFixture(100.0, 42, TypeArgs=new Type[] {typeof(double), typeof(int) } )]
 [TestFixture(42, 100.0, TypeArgs=new Type[] {typeof(int), typeof(double) } )]
 public class SpecifyTypeArgsSeparately&lt;T1, T2&gt;
@@ -306,12 +306,12 @@ public class SpecifyTypeArgsSeparately&lt;T1, T2&gt;
     }
 }</pre></div>
 
-   <li>In some cases, when the constructor makes use of all the type parameters 
-       NUnit may simply be able to deduce them from the arguments provided. 
+   <li>In some cases, when the constructor makes use of all the type parameters
+       NUnit may simply be able to deduce them from the arguments provided.
 	   That's the case here and the following is the preferred way to
 	   write this example...
-   
-<div class="code"><pre class="highlight" class="prettyprint">
+
+<div class="code"><pre class="prettyprint">
 [TestFixture(100.0, 42)]
 [TestFixture(42, 100.0)]
 public class DeduceTypeArgsFromArgs&lt;T1, T2&gt;
@@ -332,7 +332,7 @@ public class DeduceTypeArgsFromArgs&lt;T1, T2&gt;
         Assert.That(t2, Is.TypeOf&lt;T2&gt;());
     }
 }</pre></div>
-   </ol> 
+   </ol>
 
 </div>
 

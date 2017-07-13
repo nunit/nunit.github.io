@@ -8,7 +8,7 @@ layout: help
 <h3>Description (NUnit 2.4)</h3>
 
 <p>The Description attribute is used to apply descriptive text to a Test,
-TestFixture or Assembly. The text appears in the XML output file and is 
+TestFixture or Assembly. The text appears in the XML output file and is
 shown in the Test Properties dialog.</p>
 
 <h4>Example:</h4>
@@ -25,7 +25,7 @@ shown in the Test Properties dialog.</p>
 	</div>
 </div>
 
-<pre class="highlight" class="prettyprint cs">[assembly: Description("Assembly description here")]
+<pre class="prettyprint cs">[assembly: Description("Assembly description here")]
 
 namespace NUnit.Tests
 {
@@ -35,13 +35,13 @@ namespace NUnit.Tests
   [TestFixture, Description("Fixture description here")]
   public class SomeTests
   {
-    [Test, Description("Test description here")] 
+    [Test, Description("Test description here")]
     public void OneTest()
     { /* ... */ }
   }
 }
 </pre>
-<pre class="highlight" class="prettyprint vb">&lt;assembly: Description("Assembly description here")&gt;
+<pre class="prettyprint vb">&lt;assembly: Description("Assembly description here")&gt;
 
 Imports System
 Imports Nunit.Framework
@@ -57,7 +57,7 @@ Namespace Nunit.Tests
   End Class
 End Namespace
 </pre>
-<pre class="highlight" class="prettyprint mc">[assembly:Description("Assembly description here")]
+<pre class="prettyprint mc">[assembly:Description("Assembly description here")]
 
 #using &lt;Nunit.Framework.dll&gt;
 using namespace System;
@@ -80,7 +80,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" class="prettyprint js">/** @assembly NUnit.Framework.Description("Assembly description here") */
+<pre class="prettyprint js">/** @assembly NUnit.Framework.Description("Assembly description here") */
 
 package NUnit.Tests;
 
@@ -100,10 +100,10 @@ public class SomeTests
 </pre>
 </div>
 
-<p><b>Note:</b> The Test and TestFixture attributes continue to support an 
-optional Description property. The Description attribute should be used for 
+<p><b>Note:</b> The Test and TestFixture attributes continue to support an
+optional Description property. The Description attribute should be used for
 new applciations. If both are used, the Description attribute takes precedence.</p>
-	
+
 
 
 </div>

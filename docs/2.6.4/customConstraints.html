@@ -5,14 +5,14 @@ layout: help
 
 <h2>Custom Constraints (NUnit 2.4 / 2.5)</h2>
 
-<p>You can implement your own custom constraints by creating a class that 
-inherits from the <b>Constraint</b> abstract class, which supports performing a 
+<p>You can implement your own custom constraints by creating a class that
+inherits from the <b>Constraint</b> abstract class, which supports performing a
 test on an actual value and generating appropriate messages. The class includes
 two abstract methods, which you must override and four virtual methods with
 default implementation that may be overridden as needed:
-   
+
 <div class="code" style="width: 36em">
-<pre class="highlight" class="prettyprint">public abstract class Constraint
+<pre class="prettyprint">public abstract class Constraint
 {
  	...
     public abstract bool Matches( object actual );
@@ -23,7 +23,7 @@ default implementation that may be overridden as needed:
     public virtual void WriteActualValueTo( MessageWriter writer );
 	...
 }</pre>
-</div>   
+</div>
 
 <p>Your derived class should save the actual argument to Matches in the protected
 field <b>actual</b> for later use.
@@ -37,18 +37,18 @@ requirements for error messages.
 
 <p>Having written a custom constraint class, you can use it directly through its constructor:
 
-<div class="code"><pre class="highlight" class="prettyprint">Assert.That(myObject, new CustomConstraint());</pre>
+<div class="code"><pre class="prettyprint">Assert.That(myObject, new CustomConstraint());</pre>
 </div>
 
 <p>You may also use it in expressions through NUnit's <b>Matches</b> syntax element:
-<div class="code"><pre class="highlight" class="prettyprint">Assert.That(myObject, Is.Not.Null.And.Matches(new CustomConstraint());</pre>
+<div class="code"><pre class="prettyprint">Assert.That(myObject, Is.Not.Null.And.Matches(new CustomConstraint());</pre>
 </div>
 
 <p>The direct construction approach is not very convenient or easy to read.
-For its built-in constraints, NUnit includes classes that implement a special 
+For its built-in constraints, NUnit includes classes that implement a special
 constraint syntax, allowing you to write things like...
 
-<div class="code"><pre class="highlight" class="prettyprint">Assert.That( myArray, Is.All.InRange(1,100) );</pre>
+<div class="code"><pre class="prettyprint">Assert.That( myArray, Is.All.InRange(1,100) );</pre>
 </div>
 
 <p>Ideally, that's what you would like to do with the custom constraint as well.
@@ -61,13 +61,13 @@ or methods that constuct your custom constructor. If you like, you can even call
 <b>Is</b>, provided you place it in your own namespace and avoid any conflicts. This
 allows you to write things like:
 
-<div class="code"><pre class="highlight" class="prettyprint">Assert.That( myObject, Is.Custom(x,y) );</pre>
+<div class="code"><pre class="prettyprint">Assert.That( myObject, Is.Custom(x,y) );</pre>
 </div>
 
 <li>Provide an extension method for NUnit's <b>ConstraintExpression</b>, allowing
 you to write things like:
 
-<div class="code"><pre class="highlight" class="prettyprint">Assert.That( myList, Is.Not.All.Custom(x,y) );</pre>
+<div class="code"><pre class="prettyprint">Assert.That( myList, Is.Not.All.Custom(x,y) );</pre>
 </div>
 
 </ol>

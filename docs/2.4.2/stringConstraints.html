@@ -7,7 +7,7 @@ layout: help
 
 <p>String constraints perform tests that are specific to strings.
    The following string constraints are provided.
-   
+
 <table class="constraints">
 <tr><th>Syntax Helpers</th><th>Constructor</th><th>Operation</th></tr>
 <tr><td>Text.Contains( string )<br>Text.DoesNotContain( string )</td><td>SubstringConstraint( string )</td></td><td>tests for a substring</td></tr>
@@ -18,7 +18,7 @@ layout: help
 
 <h4>Examples</h4>
 
-<div class="code" style="width: 36em"><pre class="highlight" class="prettyprint">
+<div class="code" style="width: 36em"><pre class="prettyprint">
 string phrase = "Make your tests fail before passing!"
 
 Assert.That( phrase, Text.Contains( "tests fail" ) );

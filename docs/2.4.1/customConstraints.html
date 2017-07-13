@@ -9,18 +9,18 @@ layout: help
 that implements the <b>IConstraint</b> interface, which supports performing a test
    on an actual value and generating appropriate messages. The interface is
    defined as follows:
-   
+
 <div class="code" style="width: 36em">
-<pre class="highlight" class="prettyprint">public interface IConstraint
+<pre class="prettyprint">public interface IConstraint
 {
     bool Matches( object actual );
     void WriteMessageTo( MessageWriter writer );
     void WriteDescriptionTo( MessageWriter writer );
     void WriteActualValueTo( MessageWriter writer );
 }</pre>
-</div>   
+</div>
 
-<p>One approach is to derive from the abstract class Constraint, which 
+<p>One approach is to derive from the abstract class Constraint, which
 provides the <b>&amp;</b> and <b>|</b> operators as well as a default
 implementation of the WriteMessageTo() and WriteActualValueTo() methods.
 

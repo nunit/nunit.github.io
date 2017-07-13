@@ -10,29 +10,29 @@ layout: help
 </div>
 
 <p>NUnit originally identified tests in the time-honored way used in many xUnit
-test frameworks. Test classes inherited from the framework's 
+test frameworks. Test classes inherited from the framework's
 TestCase class. Individual test case methods were identified by having names
 starting with "test..."</p>
 
 <p>With NUnit 2.0, we introduced the use of attributes to identify both fixtures
-and test cases. Use of attributes in this way was a natural outcome of their 
+and test cases. Use of attributes in this way was a natural outcome of their
 presence in .NET and gave us a way of identifying tests that was completely
 independent of both inheritance and naming conventions.</p>
 
 <p>However, by moving away from an inheritance-based mechanism we no longer
-had an easy way for others to extend NUnit's internal behavior. NUnit Addins are 
-intended to fill that gap, providing an mechanism to introduce new or changed 
+had an easy way for others to extend NUnit's internal behavior. NUnit Addins are
+intended to fill that gap, providing an mechanism to introduce new or changed
 behavior without modifying NUnit itself.</p>
 
 <h3>Extension Points, Extensions and Addins</h3>
 
 <p>NUnit provides a number of <b>Extension Points</b>, places where it is
 possible to extend its behavior. Because NUnit works with various hosts
-and uses separate AppDomains to run tests, <b>Extension Points</b> are 
+and uses separate AppDomains to run tests, <b>Extension Points</b> are
 categorized into three types: Core, Client and Gui. Each of these types is
 supported by a different <b>Extension Host</b>.
 
-<p>An NUnit <b>Addin</b> provides enhanced functionality through one or more 
+<p>An NUnit <b>Addin</b> provides enhanced functionality through one or more
 extensions, which it installs at identified <b>Extension Points</b>. Each
 <b>Addin</b> is characterized by the types of extensions it supplies, so that
 an <b>Extension Host</b> knows whether to invoke it.</p>
@@ -40,9 +40,9 @@ an <b>Extension Host</b> knows whether to invoke it.</p>
 <blockquote>
 <p><b>Note:</b> In the current release, only Core extensions are actually
 supported. An Addin may characterize itself as a Client or Gui extension and
-will be listed as such in the <a href="addinsDialog.html">Addins Dialog</a>, 
+will be listed as such in the <a href="addinsDialog.html">Addins Dialog</a>,
 but no other action is taken.</p>
-</blockquote> 
+</blockquote>
 
 <h3>Addin Identification, Loading and Installation</h3>
 
@@ -53,10 +53,10 @@ for public classes with the <b>NUnitAddinAttribute</b> and implementing the
 <p><b>NUnitAddinAttribute</b> supports three optional named parameters: Type,
 Name and Description. Name and Description are strings representing the name
 of the extension and a description of what it does. If no name is provided,
-the name of the class is used. Type may be any one or a combination of the 
+the name of the class is used. Type may be any one or a combination of the
 ExtensionType enum members:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	[Flags]
 	public enum ExtensionType
 	{
@@ -73,7 +73,7 @@ defaults to ExtensionType.Core.</p>
 <p>The <b>IAddin</b> interface, which must be implemented by each Addin,
 is defined as follows:</p>
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface IAddin
 	{
 		bool Install( IExtensionHost host );
@@ -89,7 +89,7 @@ host and - for Core extensions - each time a new test domain is loaded.</p>
 <p>The Install method uses the <b>IExtensionHost</b> interface to locate
 extension points. It is defined as follows:</p>
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface IExtensionHost
 	{
 	 	IExtensionPoint[] ExtensionPoints { get; }
@@ -107,7 +107,7 @@ the source code for details.</p>
 get the interface to a particular extension point. The <b>IExtensionPoint</b>
 interface is defined as follows:</p>
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface IExtensionPoint
 	{
 		string Name { get; }
@@ -144,12 +144,12 @@ code of NUnit itself, since NUnit uses the same mechanism internally.</p>
 <p>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	IExtensionPoint suiteBuilders = host.GetExtensionPoint( "SuiteBuilders" );</pre>
 
 <p>The extension object passed to Install must implement the ISuiteBuilder interface:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface ISuiteBuilder
 	{
 		bool CanBuildFrom( Type type );
@@ -164,12 +164,12 @@ with its contained test cases.
 <p>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	IExtensionPoint testCaseBuilders = host.GetExtensionPoint( "TestCaseBuilders" );</pre>
 
 <p>The extension object passed to Install must implement the ITestCaseBuilder interface:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface ITestCaseBuilder
 	{
 		bool CanBuildFrom( MethodInfo method );
@@ -186,12 +186,12 @@ the fixture type.
 <p>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	IExtensionPoint testDecorators = host.GetExtensionPoint( "TestDecorators" );</pre>
 
 <p>The extension object passed to Install must implement the ITestDecorator interface:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface ITestDecorator
 	{
 		Test Decorate( Test test, MemberInfo member );
@@ -211,12 +211,12 @@ to accomplish:
 <p>
 <p>Addins use the host to access this extension point by name:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	IExtensionPoint listeners = host.GetExtensionPoint( "EventListeners" );</pre>
 
 <p>The extension object passed to Install must implement the EventListener interface:
 
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	public interface EventListener
 	{
 		void RunStarted( string name, int testCount );
@@ -237,7 +237,7 @@ that you have no need of.
 <h3>Tips for Writing Extensions</h3>
 
 <p>An Extenders Guide will be published in the future. At the moment, writing an
-extension is a bit of an adventure. Extension authors are advised to join the 
+extension is a bit of an adventure. Extension authors are advised to join the
 nunit-developer list and post questions and comments there.
 
 <p>For the moment, the following tips may be of assistance.
@@ -250,7 +250,7 @@ this is rather difficult to do without duplicating a great deal of NUnit code. M
 of the add-in samples provided with NUnit are currently version dependent.
 
 <li>If you place the definition of a custom attribute in the same assembly as your
-add-in, then user tests are dependent on the add-in assembly. If the add-in is 
+add-in, then user tests are dependent on the add-in assembly. If the add-in is
 version-dependent, then the user tests will also be version-dependent. We suggest
 placing any types referenced by user tests in a separate assembly, particularly if
 your extension relies on nunit.core.

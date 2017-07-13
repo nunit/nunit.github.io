@@ -5,24 +5,24 @@ layout: help
 
 <div style="float:right"><b>Update: August 22, 2007</b></div>
 <h3>SuiteAttribute (NUnit 2.0)</h3>
-	
-<p>The Suite Attribute is used to define subsets of suites based on user 
+
+<p>The Suite Attribute is used to define subsets of suites based on user
 	preference. It was introduced in NUnit 2.0 to replace inheritance from
 	the TestSuite class.</p>
-	
+
 <p>Originally, the NUnit developers believed that the need for the Suite
     mechanism would diminish because of the dynamic creation of suites based
 	on namespaces. It was provided for backwards compatibility.</p>
-	
+
 <p>That has not proven to be true. Suites are still used today by many people,
-    so we are making an effort to revive them in terms of usability. The 
+    so we are making an effort to revive them in terms of usability. The
 	current release supports suites using the classic mechanism: a static property
 	with the SuiteAttribute returns a TestSuite, populated with the tests
 	that are to be executed.
-	
+
 <p>This approach currently has some limitations, which we hope to remove in
     a future NUnit release:</p>
-	
+
 	<ol>
 		<li>Creating a suite requires a reference to the nunit.core assembly,
 		which is not normally referenced by user tests. This means that the tests
@@ -36,7 +36,7 @@ layout: help
 
 <h4>Example:</h4>
 
-<div class="code"><pre class="highlight" class="prettyprint">namespace NUnit.Tests
+<div class="code"><pre class="prettyprint">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;

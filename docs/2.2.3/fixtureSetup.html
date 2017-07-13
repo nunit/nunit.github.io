@@ -30,9 +30,9 @@ layout: help
 
 <h3>TestFixtureSetUpAttribute (NUnit 2.1)</h3>
 
-<p>This attribute is used inside a TestFixture to provide a single set of 
+<p>This attribute is used inside a TestFixture to provide a single set of
 	functions that are performed once prior to executing any of the tests
-	in the fixture. A TestFixture can have only one TestFixtureSetUp method. 
+	in the fixture. A TestFixture can have only one TestFixtureSetUp method.
 	If more than one is defined the TestFixture will compile successfully
 	but its tests will not run.</p>
 
@@ -50,7 +50,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" id="CS1" style="display:">namespace NUnit.Tests
+<pre id="CS1" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -70,7 +70,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" id="VB1" style="display:none">Imports System
+<pre id="VB1" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -91,7 +91,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -114,7 +114,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" id="JS1" style="display:none">package NUnit.Tests;
+<pre id="JS1" style="display:none">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;

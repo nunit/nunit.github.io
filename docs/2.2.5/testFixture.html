@@ -29,7 +29,7 @@ layout: help
 </script>
 
 <h3>TestFixtureAttribute (NUnit 2.0)</h3>
-<p>This is the attribute that marks a class that contains tests and, optionally, 
+<p>This is the attribute that marks a class that contains tests and, optionally,
 	setup or teardown methods.</p>
 <p>There are a few restrictions on a class that is used as a test fixture.
 	<ul>
@@ -38,7 +38,7 @@ layout: help
 		<li>
 			It must have a default constructor or NUnit will not be able to construct it.</li>
 		<li>
-			The constructor should not have any side effects, since NUnit may construct the 
+			The constructor should not have any side effects, since NUnit may construct the
 			class multiple times in the course of a session.</li>
 	</ul>
 </p>
@@ -57,7 +57,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" id="CS1" style="display:">namespace NUnit.Tests
+<pre id="CS1" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -70,7 +70,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" id="VB1" style="display:none">Imports System
+<pre id="VB1" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -81,7 +81,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -101,7 +101,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" id="JS1" style="display:none">package NUnit.Tests;
+<pre id="JS1" style="display:none">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;

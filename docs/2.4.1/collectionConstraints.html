@@ -7,7 +7,7 @@ layout: help
 
 <p>Collection constraints perform tests that are specific to collections.
    The following collection constraints are provided.
-   
+
 <table class="constraints">
 <tr><th>Syntax Helper</th><th>Constructor</th><th>Operation</th></tr>
 <tr><td>Is.All...</td><td>AllItemsConstraint( Constraint )</td></td><td>applies a constraint to each item in a collection</td></tr>
@@ -26,14 +26,14 @@ layout: help
 
 <h4>Examples of Use</h4>
 
-<div class="code" style="width: 38em"><pre class="highlight" class="prettyprint">
+<div class="code" style="width: 38em"><pre class="prettyprint">
 int[] iarray = new int[] { 1, 2, 3 };
 string[] sarray = new string[] { "a", "b", "c" };
 
 Assert.That( iarray, Is.All.Not.Null );
 Assert.That( sarray, Is.All.InstanceOfType(typeof(string)) );
 Assert.That( iarray, Is.All.GreaterThan(0) );
-                 
+
 Assert.That( sarray, Is.Unique );
 
 Assert.That( iarray, List.Contains(3) );

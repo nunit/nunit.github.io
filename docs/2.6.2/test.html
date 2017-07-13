@@ -8,41 +8,41 @@ layout: help
 <h3>TestAttribute (NUnit 2.0 / 2.5 / 2.6)</h3>
 
 <p>The Test attribute is one way of marking a method inside a TestFixture class
-    as a test. For backwards compatibility with previous versions of Nunit a 
-	test method may also be found if the first 4 letters are &quot;test&quot; 
+    as a test. For backwards compatibility with previous versions of Nunit a
+	test method may also be found if the first 4 letters are &quot;test&quot;
 	regardless of case. This option is available by setting a value in
 	the config file for the test.</p>
-	
+
 <p>Prior to NUnit 2.5, the signature for a test method was:
-	<pre class="highlight" class="prettyprint">        public void MethodName()</pre></p>
-	
+	<pre class="prettyprint">        public void MethodName()</pre></p>
+
 <p>Beginning with NUnit 2.5, static methods may be used as tests:
-	<pre class="highlight" class="prettyprint">        public static void MethodName()</pre></p>
-	
+	<pre class="prettyprint">        public static void MethodName()</pre></p>
+
 <p>In addition, with 2.5, test methods may have arguments and return
    values, provided that NUnit is told what values to use for the
    arguments and how to handle the return value. For more information
-   on these capabilities, see 
+   on these capabilities, see
    <a href="parameterizedTests.html">Parameterized Tests</a>   as well as some of the related attributes
    listed at the end of this page.
-   
-<p>Parameterized test methods may also be generic, provided that 
+
+<p>Parameterized test methods may also be generic, provided that
    NUnit is able to deduce the proper argument types from the
    types of the data arguments supplied.
-   
-<p>Beginning with NUnit 2.6.2, test methods targetting .Net 4.5 may be 
-   marked as <b>async</b> and NUnit will wait for the method to complete 
-   before recording the result and moving on to the next test.<b>Async</b> 
+
+<p>Beginning with NUnit 2.6.2, test methods targetting .Net 4.5 may be
+   marked as <b>async</b> and NUnit will wait for the method to complete
+   before recording the result and moving on to the next test.<b>Async</b>
    test methods may return <b>void</b> or <b>Task</b> if no value is returned,
    or <b>Task&lt;T&gt;</b> if a value of type <b>T</b> is returned.
-	
-<p>If the programmer marks a test method that does not have the correct signature 
-   it will be considered as not runnable and be indicated as such by the console
-   or gui runner. In the Gui, such tests are marked in red.</p> 
 
-<p>In the examples on this page, NUnit would have no way of knowing what values 
+<p>If the programmer marks a test method that does not have the correct signature
+   it will be considered as not runnable and be indicated as such by the console
+   or gui runner. In the Gui, such tests are marked in red.</p>
+
+<p>In the examples on this page, NUnit would have no way of knowing what values
    to supply as arguments, so methods without parameters are used.
-   
+
 <h4>Example:</h4>
 
 <div class="code">
@@ -57,7 +57,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -74,7 +74,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" class="prettyprint vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -87,7 +87,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -107,7 +107,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" class="prettyprint js">package NUnit.Tests;
+<pre class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;

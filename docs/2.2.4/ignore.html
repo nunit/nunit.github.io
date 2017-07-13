@@ -34,16 +34,16 @@ layout: help
 
 <h3>IgnoreAttribute (NUnit 2.0)</h3>
 
-<p>The ignore attribute is an attribute to not run a test or test fixture for a 
-	period of time. The person marks either a Test or a TestFixture with the Ignore 
-	Attribute. The running program sees the attribute and does not run the test or 
-	tests. The progress bar will turn yellow if a test is not run and the test will 
+<p>The ignore attribute is an attribute to not run a test or test fixture for a
+	period of time. The person marks either a Test or a TestFixture with the Ignore
+	Attribute. The running program sees the attribute and does not run the test or
+	tests. The progress bar will turn yellow if a test is not run and the test will
 	be mentioned in the reports that it was not run.</p>
 
-<p>This feature should be used to temporarily not run a test or fixture. This is a 
-	better mechanism than commenting out the test or renaming methods, since the 
-	tests will be compiled with the rest of the code and there is an indication at 
-	run time that a test is not being run. This insures that tests will not be 
+<p>This feature should be used to temporarily not run a test or fixture. This is a
+	better mechanism than commenting out the test or renaming methods, since the
+	tests will be compiled with the rest of the code and there is an indication at
+	run time that a test is not being run. This insures that tests will not be
 	forgotten.</p>
 
 <h4>Test Fixture Syntax</h4>
@@ -60,7 +60,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" id="CS1" style="display:">namespace NUnit.Tests
+<pre id="CS1" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -74,7 +74,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" id="VB1" style="display:none">Imports System
+<pre id="VB1" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -86,7 +86,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -107,7 +107,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" id="JS1" style="display:none">package NUnit.Tests;
+<pre id="JS1" style="display:none">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -120,7 +120,7 @@ public class SuccessTests
   // ...
 }
 </pre>
-	
+
 </div>
 
 <h4>Test Syntax</h4>
@@ -137,7 +137,7 @@ public class SuccessTests
 	</div>
 </div>
 
-<pre class="highlight" id="CS2" style="display:">namespace NUnit.Tests
+<pre id="CS2" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -152,7 +152,7 @@ public class SuccessTests
 }
 </pre>
 
-<pre class="highlight" id="VB2" style="display:none">Imports System
+<pre id="VB2" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -166,7 +166,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC2" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC2" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -186,7 +186,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" id="JS2" style="display:none">package NUnit.Tests;
+<pre id="JS2" style="display:none">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
