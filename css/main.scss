@@ -153,16 +153,22 @@ pre.prettyprint {
 #subnav li#current a{ background-image: url(img/bulletOn.gif) }
 #subnav li a:hover { background-image: url(img/bulletOn.gif) }
 
-#help_content p {
+#help_content {
+   max-width: 660px;
+
+   p {
     padding: 0;
     margin: 0 0 1em 0;
-    max-width: 660px;
+   }
 }
 
 div.help {
   min-width: 992px;
 }
 
+pre.programtext {
+  max-width: 660px;
+}
 
 ul.across { width: 100%; display: block; list-style: none; }
 ul.across li { float: left; display: block; width: 9em }
