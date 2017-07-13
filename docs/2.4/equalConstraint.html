@@ -17,14 +17,14 @@ layout: help
 <ol>
 <li>Numerics of different types compare successfully if their values are equal.
 <li>Values of type float and double are normally compared using an additional
-argument that indicates a tolerance within which they will be considered 
+argument that indicates a tolerance within which they will be considered
 as equal. The Within modifier is used for this purpose. It is accepted
 but ignored on comparisons other than float or double.
 <li>Unlike normal floating point arithmetic, floating NaN comparisons succeed
-    if both values are NaN. See the note on 
+    if both values are NaN. See the note on
 	<a href="equalityAsserts.html">Equality Asserts</a>.
 <li>You may use this constraint to compare arrays with the same number of dimensions,
-   two collections or an single-dimensioned array and collection. If you want to 
+   two collections or an single-dimensioned array and collection. If you want to
    treat the arrays being compared as simple collections, use the AsCollection
    modifier, which causes the comparison to be made element by element, without
    regard for the rank or dimensions of the array. Jagged arrays (arrays of arrays)
@@ -36,7 +36,7 @@ modifier. It may also be used when comparing arrays or collections of strings.
 
 <h4>Examples of Use</h4>
 
-<div class="code" style="width: 40em"><pre class="highlight" class="prettyprint">
+<div class="code" style="width: 40em"><pre class="prettyprint">
 Assert.That(2 + 2, Is.EqualTo(4));
 Assert.That(2 + 2 == 4);
 Assert.That(2 + 2, Is.Not.EqualTo(5));
@@ -54,7 +54,7 @@ Assert.That(i3, Is.EqualTo(d3));
 Assert.That(i3, Is.Not.EqualTo(iunequal));
 
 int array2x2 = new int[,] { { 1, 2 } { 3, 4 } };
-int array4 = new int[] { 1, 2, 3, 4 };		
+int array4 = new int[] { 1, 2, 3, 4 };
 Assert.That( array2x2, Is.EqualTo( array4 ) ); // Fails
 Assert.That( array2x2, Is.EqualTo( array4 ).AsCollection ); // Succeeds
 

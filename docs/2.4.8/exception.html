@@ -7,18 +7,18 @@ layout: help
 
 <h3>ExpectedExceptionAttribute (NUnit 2.0 plus Updates)</h3>
 
-<p>This is the way to specify that the execution of a test will throw an 
+<p>This is the way to specify that the execution of a test will throw an
 	exception. This attribute has a number of positional and
 	named parameters, which we will discuss in separate sections
 	according to the purpose they serve.</p>
-	
+
 <h4>Specifying the Expected Exception Type</h4>
 
 <p>The original attribute, introduced with NUnit 2.0 took a single
 argument giving the exact type of the expected exception. For example...</p>
 
 
-<div class="code"><pre class="highlight" class="prettyprint">[ExpectedException( typeof( ArgumentException ) )]
+<div class="code"><pre class="prettyprint">[ExpectedException( typeof( ArgumentException ) )]
 public void TestMethod()
 {
 ...</pre></div>
@@ -27,7 +27,7 @@ public void TestMethod()
 of exception as a string, avoiding the need for a reference to the
 defining assembly...</p>
 
-<div class="code"><pre class="highlight" class="prettyprint">[ExpectedException( "System.ArgumentException" ) )]
+<div class="code"><pre class="prettyprint">[ExpectedException( "System.ArgumentException" ) )]
 public void TestMethod()
 {
 ...</pre></div>
@@ -43,7 +43,7 @@ same extension was made to the constructor taking a string argument. With
 NUnit 2.4, these arguments are marked obsolete, and a named parameter
 is provided instead...</p>
 
-<div class="code" style="width: 44em"><pre class="highlight" class="prettyprint">// Obsolete form:
+<div class="code" style="width: 44em"><pre class="prettyprint">// Obsolete form:
 [ExpectedException( typeof( ArgumentException ), "expected message" )]
 [ExpectedException( "System.ArgumentException", "expected message" )]
 
@@ -52,14 +52,14 @@ is provided instead...</p>
 [ExpectedException( "System.ArgumentException", ExpectedMessage="expected message" )]</pre></div>
 
 <p>With NUnit 2.4, it is possible to specify additional tests on the
-exception message, beyond a simple exact match. This is done using the 
+exception message, beyond a simple exact match. This is done using the
 MatchType named parameter, whose argument is an enumeration, defined as
 follows:</p>
-   
-<div class="code"><pre class="highlight" class="prettyprint">public enum MessageMatch
+
+<div class="code"><pre class="prettyprint">public enum MessageMatch
 {
     /// Expect an exact match
-    Exact,	
+    Exact,
     /// Expect a message containing the parameter string
     Contains,
     /// Match the regular expression provided as a parameter
@@ -70,7 +70,7 @@ follows:</p>
 with a message containing "unspecified" is received.</p>
 
 <div class="code" style="width: 57em">
-<pre class="highlight" class="prettyprint">[ExpectedException( typeof( ArgumentException), ExpectedMessage="unspecified", MatchType=MessageMatch.Contains )]
+<pre class="prettyprint">[ExpectedException( typeof( ArgumentException), ExpectedMessage="unspecified", MatchType=MessageMatch.Contains )]
 public void TestMethod()
 {
 ...</pre></div>
@@ -84,7 +84,7 @@ displayed if the ExpectedException attribute is not satisfied. This
 is done through the UserMessage named parameter...</p>
 
 <div class="code" style="width: 41em">
-<pre class="highlight" class="prettyprint">[ExpectedException( typeof( ArgumentException ), UserMessage="Custom message" )]
+<pre class="prettyprint">[ExpectedException( typeof( ArgumentException ), UserMessage="Custom message" )]
 public void TestMethod()
 {
 ...</pre>
@@ -102,7 +102,7 @@ in the same way.</p>
 <p>An common exception handler may be designated by implementing the
 <b>IExpectExceptionInterface</b>, which is defined as follows...</p>
 
-<div class="code"><pre class="highlight" class="prettyprint">public interface IExpectException
+<div class="code"><pre class="prettyprint">public interface IExpectException
 {
     void HandleException( System.Exception ex );
 }</pre>
@@ -117,7 +117,7 @@ indicate that an exception is expected.</p>
 <p>An handler may be designated for a particular method
 using the <b>Handler</b> named parameter.</p>
 
-<div class="code"><pre class="highlight" class="prettyprint">[ExpectedException( Handler="HandlerMethod" )]
+<div class="code"><pre class="prettyprint">[ExpectedException( Handler="HandlerMethod" )]
 public void TestMethod()
 {
 ...
@@ -135,8 +135,8 @@ applies to any method that specifies it, while the normal
 exception handler applies to any other methods that specify
 an <b>ExpectedException</b>.</p>
 
-<p>However it is specified, the handler method should examine the exception and 
-<b>Assert</b> on whatever properties are relevant. Any resulting failure message 
+<p>However it is specified, the handler method should examine the exception and
+<b>Assert</b> on whatever properties are relevant. Any resulting failure message
 will then be consistent in format with other assertions performed in the tests.</p>
 
 
@@ -145,7 +145,7 @@ will then be consistent in format with other assertions performed in the tests.<
 <div class="code">
 
 <div class="langFilter">
-	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
+	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="/docs/img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
 	<div id="DD1" class="dropdown" style="display: none" onclick="Hide('DD1')">
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
@@ -153,7 +153,7 @@ will then be consistent in format with other assertions performed in the tests.<
 	</div>
 </div>
 
-<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -174,7 +174,7 @@ will then be consistent in format with other assertions performed in the tests.<
 }
 </pre>
 
-<pre class="highlight" class="prettyprint vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -194,7 +194,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 

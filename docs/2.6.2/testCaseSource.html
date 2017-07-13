@@ -8,11 +8,11 @@ layout: help
 <h3>TestCaseSourceAttribute (NUnit 2.5)</h3>
 
 <p><b>TestCaseSourceAttribute</b> is used on a parameterized test method to
-identify the property, method or field that will provide the required 
+identify the property, method or field that will provide the required
 arguments. The attribute has three public constructors, only one of which is
 recommended for use in new code:
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 TestCaseSourceAttribute(Type sourceType);
 </pre>
 </div>
@@ -25,7 +25,7 @@ the test method on which the attribute appears.
 use in preference to other forms because it doesn't use a string to specify
 the data source and is therefore more easily refactored.
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 TestCaseSourceAttribute(Type sourceType, string sourceName);
 TestCaseSourceAttribute(string sourceName);
 </pre>
@@ -37,7 +37,7 @@ the test cases. It must have a default constructor.
 
 <p>If <b>sourceType</b> is not specified, the class containing the test
 method is used. NUnit will construct it using either the default constructor
-or - if arguments are provided - the appropriate constructor for those 
+or - if arguments are provided - the appropriate constructor for those
 arguments.
 
 <p>The <b>sourceName</b> argument represents the name of the source used
@@ -64,7 +64,7 @@ to provide test cases. It has the following characteristics:
 the enumerator as follows:
 <ol>
 
-<li><p>If it is an object implementing <b>NUnit.Framework.ITestCaseData</b>, 
+<li><p>If it is an object implementing <b>NUnit.Framework.ITestCaseData</b>,
 its properties are used to provide the test case. In NUnit 2.5 and later, this is
 done using reflection to allow compatibility with earlier versions that
 did not implement <b>ITestCaseData</b>.
@@ -94,7 +94,7 @@ did not implement <b>ITestCaseData</b>.
   <dd>The expected result to be returned from the method, which must have
       a compatible return type.
   <dt><b>TestName</b>
-  <dd>Provides a name for the test. If not specified, a name is generated based on 
+  <dd>Provides a name for the test. If not specified, a name is generated based on
       the method name and the arguments provided
   </dl>
 
@@ -106,7 +106,7 @@ that argument it is used directly.
 the arguments for the method, as in this example, which returns
 arguments from a named static field.
 
-<div class="code"><pre class="highlight" class="prettyprint">[Test, TestCaseSource("DivideCases")]
+<div class="code"><pre class="prettyprint">[Test, TestCaseSource("DivideCases")]
 public void DivideTest(int n, int d, int q)
 {
     Assert.AreEqual( q, n / d );
@@ -116,23 +116,23 @@ static object[] DivideCases =
 {
     new object[] { 12, 3, 4 },
     new object[] { 12, 2, 6 },
-    new object[] { 12, 4, 3 } 
+    new object[] { 12, 4, 3 }
 };
 </pre></div>
 
 <li><p>If it is an array of some other type, NUnit can use it provided
 that the arguments to the method are all of that type. For example,
-the above code could be modified to make the three nested arrays 
+the above code could be modified to make the three nested arrays
 of type int[].
 
-<li><p>If anything else is returned, it is used directly as the sole 
+<li><p>If anything else is returned, it is used directly as the sole
 argument to the method. This allows NUnit to give an error message
 in cases where the method requires a different number arguments or
 an argument of a different type.
-This can also eliminate a bit of extra typing by the programmer, 
+This can also eliminate a bit of extra typing by the programmer,
 as in this example:
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 static int[] EvenNumbers = new int[] { 2, 4, 6, 8 };
 
 [Test, TestCaseSource("EvenNumbers")]
@@ -147,11 +147,11 @@ public void TestMethod(int num)
 <h3>TestCaseData Class</h3>
 
 <p>Although any object implementing <b>ITestCaseData</b> may be used to
-   provide extended test case information, NUnit provides the <b>TestCaseData</b> 
-   class for this purpose. The following    example returns <b>TestCaseData</b> 
+   provide extended test case information, NUnit provides the <b>TestCaseData</b>
+   class for this purpose. The following    example returns <b>TestCaseData</b>
    instances from a data source in a separately defined class.
 
-<div class="code"><pre class="highlight" class="prettyprint">[TestFixture]
+<div class="code"><pre class="prettyprint">[TestFixture]
 public class MyTests
 {
   [Test,TestCaseSource(typeof(MyFactoryClass),"TestCases")]
@@ -159,7 +159,7 @@ public class MyTests
   {
     return n/d;
   }
-	
+
   ...
 }
 
@@ -177,21 +177,21 @@ public class MyFactoryClass
         .SetName("DivideByZero")
         .SetDescription("An exception is expected");
     }
-  }  
+  }
 }
 </div>
 
 <p>This example uses the fluent interface supported by <b>TestCaseData</b>
 to make the program more readable. The last yield statement above  is equivalent to
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
       TestCaseData data = new TestCaseData(0,0);
       data.ExpectedException = typeof(DivideByZeroException;
       data.TestName = "DivideByZero";
       data.Description = "An exception is expected";
       yield return data;
 </pre>
-</div> 
+</div>
 
 <p><b>TestCaseData</b> supports the following properties
 and methods, which may be appended to an instance in any order.
@@ -214,7 +214,7 @@ and methods, which may be appended to an instance in any order.
   <dt><b>.SetDescription(string)</b>
   <dd>Sets the description property of the test
   <dt><b>.SetName(string)</b>
-  <dd>Provides a name for the test. If not specified, a name is generated based on 
+  <dd>Provides a name for the test. If not specified, a name is generated based on
       the method name and the arguments provided
   <dt><b>.SetProperty(string, string)</b>
   <dt><b>.SetProperty(string, int)</b>
@@ -232,21 +232,21 @@ and methods, which may be appended to an instance in any order.
    executed in the order in which NUnit discovers them. This order does <b>not</b>
    follow the lexical order of the attributes and will often vary between different
    compilers or different versions of the CLR.
-   
-<p>As a result, when <b>TestCaseSourceAttribute</b> appears multiple times on a 
-   method or when other data-providing attributes are used in combination with 
+
+<p>As a result, when <b>TestCaseSourceAttribute</b> appears multiple times on a
+   method or when other data-providing attributes are used in combination with
    <b>TestCaseSourceAttribute</b>, the order of the test cases is undefined.
 
-<p>However, when a single <b>TestCaseSourceAttribute</b> is used by itself, 
-   the order of the tests follows exactly the order in which the test cases 
+<p>However, when a single <b>TestCaseSourceAttribute</b> is used by itself,
+   the order of the tests follows exactly the order in which the test cases
    are returned from the source.
-   
+
 <h3>Note on Object Construction</h3>
 
 <p>NUnit locates the test cases at the time the tests are loaded, creates
-instances of each class with non-static sources and builds a list of 
+instances of each class with non-static sources and builds a list of
 tests to be executed. Each source object is only created once at this
-time and is destroyed after all tests are loaded. 
+time and is destroyed after all tests are loaded.
 
 <p>If the data source is in the test fixture itself, the object is created
 using the appropriate constructor for the fixture parameters provided on
@@ -256,7 +256,7 @@ is destroyed before the tests are run, no communication is possible between
 these two phases - or between different runs - except through the parameters
 themselves.
 
-   
+
 
 </div>
 

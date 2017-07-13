@@ -26,14 +26,14 @@ layout: help
 
 <h3>ExpectedExceptionAttribute (NUnit 2.0 / 2.2.4)</h3>
 
-<p>This is the way to specify that the execution of a test will throw an 
-	exception. This attribute has two constructors. The first (NUnit 2.0) takes a Type 
-	representing the exact type of the expected exception. The second (NUnit 2.2.4) takes 
+<p>This is the way to specify that the execution of a test will throw an
+	exception. This attribute has two constructors. The first (NUnit 2.0) takes a Type
+	representing the exact type of the expected exception. The second (NUnit 2.2.4) takes
 	the full name of the expected exception type as a string</p>
-	
-<p>In either case, the runner will execute the test, which passes only if it 
+
+<p>In either case, the runner will execute the test, which passes only if it
     throws the specified exception.	If it throws a different exception then
-	the test will fail. This is true even if the thrown exception inherits from 
+	the test will fail. This is true even if the thrown exception inherits from
 	the expected exception.</p>
 
 <h4>Example:</h4>
@@ -41,7 +41,7 @@ layout: help
 <div class="code">
 
 <div class="langFilter">
-	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
+	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="/docs/img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
 	<div id="DD1" class="dropdown" style="display: none;" onclick="Hide('DD1')">
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
@@ -49,7 +49,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" id="CS1" style="display:">namespace NUnit.Tests
+<pre id="CS1" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -70,7 +70,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" id="VB1" style="display:none">Imports System
+<pre id="VB1" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -90,7 +90,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 

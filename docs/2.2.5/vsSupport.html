@@ -11,9 +11,9 @@ interacting with the Visual Studio extensibility model.</p>
 
 <h3>Running From Within Visual Studio</h3>
 
-<p>The most convenient way to do this is to set up a custom tool entry specifying the path to 
+<p>The most convenient way to do this is to set up a custom tool entry specifying the path to
 NUnit as the command. For a VS2003 C# project, you can use $(TargetPath) for the arguments and
-$(TargetDir) for the initial directory. 
+$(TargetDir) for the initial directory.
 
 <p>With Visual Studio VS2005 this becomes a bit harder, because that release changed the
 meaning of the 'Target' macros so they now point to the intermediate 'obj' directories rather
@@ -55,10 +55,10 @@ loaded with one exception. The default location for the config file is the direc
 project file and it's default name is the same as the project file with an extension of .config.
 For example, the following command would load the tests in the nunit.tests assembly using the
 configuration file nunit.tests.dll.config located in the same directory as the dll.
-	<pre class="highlight" class="programtext">        nunit-gui.exe nunit.tests.dll</pre>
+	<pre class="programtext">        nunit-gui.exe nunit.tests.dll</pre>
 On the other hand, the following command would load the tests using the configuration file
 nunit.tests.config located in the same directory as the csproj file.
-      <pre class="highlight" class="programtext">        nunit-gui.exe nunit.tests.csproj</pre>
+      <pre class="programtext">        nunit-gui.exe nunit.tests.csproj</pre>
 The same consideration applies to running tests using the console runner.</p>
 
 <h3>Opening Visual Studio Solutions</h3>

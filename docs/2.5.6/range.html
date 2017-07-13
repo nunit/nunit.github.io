@@ -10,26 +10,26 @@ layout: help
    NUnit combines the data provided for each parameter into a set of
    test cases, data must be provided for all parameters if it is
    provided for any of them.
-   
+
 <p>By default, NUnit creates test cases from all possible combinations
    of the datapoints provided on parameters - the combinatorial approach.
    This default may be modified by use of specific attributes on the
    test method itself.
-   
+
 <p>RangeAttribute supports the following constructors:
 
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 public RangeAttribute( int from, int to );
 public RangeAttribute( int from, int to, int step );
 public RangeAttribute( long from, long to, long step );
 public RangeAttribute( float from, float to, float step );
 public RangeAttribute( double from, double to, double step );
 </pre></div>
-   
+
 <h4>Example</h4>
 
 <p>The following test will be executed nine times, as follows:
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	MyTest(1, 0.2)
 	MyTest(1, 0.4)
 	MyTest(1, 0.6)
@@ -40,7 +40,7 @@ public RangeAttribute( double from, double to, double step );
 	MyTest(3, 0.4)
 	MyTest(3, 0.6)
 </pre>
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [Test]
 public void MyTest(
     [Values(1,2,3) int x,

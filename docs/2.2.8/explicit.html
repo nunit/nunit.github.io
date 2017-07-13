@@ -34,13 +34,13 @@ layout: help
 
 <h3>ExplicitAttribute (NUnit 2.2)</h3>
 
-<p>The Explicit attribute causes a test or test fixture to be ignored unless it is 
-	explicitly selected for running. The test or fixture will be run if it is 
-	selected in the gui, if its name is specified on the console runner command 
+<p>The Explicit attribute causes a test or test fixture to be ignored unless it is
+	explicitly selected for running. The test or fixture will be run if it is
+	selected in the gui, if its name is specified on the console runner command
 	line as the fixture to run or if it is included by use of a Category filter.</p>
 
-<p>If a test or fixture with the Explicit attribute is encountered in the course of 
-	running tests, the runner treats it as if it had been ignored. The progress bar 
+<p>If a test or fixture with the Explicit attribute is encountered in the course of
+	running tests, the runner treats it as if it had been ignored. The progress bar
 	turns yellow and the test is listed in the report of tests not run</p>
 
 <h4>Test Fixture Syntax</h4>
@@ -48,7 +48,7 @@ layout: help
 <div class="code">
 
 <div class="langFilter">
-	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
+	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="/docs/img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
 	<div id="DD1" class="dropdown" style="display: none;" onclick="Hide('DD1')">
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
@@ -57,7 +57,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" id="CS1" style="display:">namespace NUnit.Tests
+<pre id="CS1" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -70,7 +70,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" id="VB1" style="display:none">Imports System
+<pre id="VB1" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -82,7 +82,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC1" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -103,7 +103,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" id="JS1" style="display:none">package NUnit.Tests;
+<pre id="JS1" style="display:none">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;
@@ -124,7 +124,7 @@ public class ExplicitTests
 <div class="code">
 
 <div class="langFilter">
-	<a href="javascript:Show('DD2')" onmouseover="Show('DD2')"><img src="img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
+	<a href="javascript:Show('DD2')" onmouseover="Show('DD2')"><img src="/docs/img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
 	<div id="DD2" class="dropdown" style="display: none;" onclick="Hide('DD2')">
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
@@ -133,7 +133,7 @@ public class ExplicitTests
 	</div>
 </div>
 
-<pre class="highlight" id="CS2" style="display:">namespace NUnit.Tests
+<pre id="CS2" style="display:">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -147,7 +147,7 @@ public class ExplicitTests
 }
 </pre>
 
-<pre class="highlight" id="VB2" style="display:none">Imports System
+<pre id="VB2" style="display:none">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -161,7 +161,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" id="MC2" style="display:none">#using &lt;Nunit.Framework.dll&gt;
+<pre id="MC2" style="display:none">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -181,7 +181,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" id="JS2" style="display:none">package NUnit.Tests;
+<pre id="JS2" style="display:none">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;

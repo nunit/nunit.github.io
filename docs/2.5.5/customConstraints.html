@@ -5,14 +5,14 @@ layout: help
 
 <h2>Custom Constraints (NUnit 2.4 / 2.5)</h2>
 
-<p>You can implement your own custom constraints by creating a class that 
-inherits from the <b>Constraint</b> abstract class, which supports performing a 
+<p>You can implement your own custom constraints by creating a class that
+inherits from the <b>Constraint</b> abstract class, which supports performing a
 test on an actual value and generating appropriate messages. The class includes
 two abstract methods, which you must override and four virtual methods with
 default implementation that may be overridden as needed:
-   
+
 <div class="code" style="width: 36em">
-<pre class="highlight" class="prettyprint">public abstract class Constraint
+<pre class="prettyprint">public abstract class Constraint
 {
  	...
     public abstract bool Matches( object actual );
@@ -23,7 +23,7 @@ default implementation that may be overridden as needed:
     public virtual void WriteActualValueTo( MessageWriter writer );
 	...
 }</pre>
-</div>   
+</div>
 
 <p>Your derived class should save the actual argument to Matches in the protected
 field actual for later use.
@@ -38,7 +38,7 @@ requirements for error messages.
 <p>NUnit includes classes that implement a special constraint syntax,
 allowing you to write things like...
 
-<div class="code"><pre class="highlight" class="prettyprint">Assert.That( myArray, Is.All.InRange(1,100) );</pre>
+<div class="code"><pre class="prettyprint">Assert.That( myArray, Is.All.InRange(1,100) );</pre>
 </div>
 
 <p>Of course, the NUnit constraint syntax will not be aware of your
@@ -46,7 +46,7 @@ custom constraint unless you modify NUnit itself. As an alternative,
 you may use the <b>Matches(Constraint)</b> syntactic element in order
 to write code like...
 
-<div class="code"><pre class="highlight" class="prettyprint">MyConstraint myConstraint = new MyConstraint();
+<div class="code"><pre class="prettyprint">MyConstraint myConstraint = new MyConstraint();
 Assert.That( myArray, Has.Some.Matches(myConstraint) );</pre>
 </div>
 

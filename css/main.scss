@@ -116,7 +116,7 @@ body {
 div.code { width: 36em; margin: 0 0; padding: 0 0; position: relative; }
 div.langFilter { position: absolute; top: 100px; left: 5%; }
 div.code div.langFilter { position: absolute; top: -15px; left: 0;}
-div.dropdown { position: absolute; top: 0; left: 14px; padding: 0 10px; width: 20px;
+div.dropdown { position: absolute; top: 0; left: 14px; padding: 0 10px;
     text-align: left; border: 1px solid #888; background-color: #ffd; }
 div.lang div.dropdown { position: absolute; left: 14px; top: 0; padding: 0 10px; width: 20px;
 	text-align: left; border: 1px solid #888; background-color: #ffd; }
@@ -138,7 +138,7 @@ pre.prettyprint {
 }
 
 /* Submenu */
-#subnav { position: absolute; top: 100px; left: 68%; background-color: #ffd;
+#subnav { position: absolute; top: 100px; left: 76%; background-color: #ffd;
           width: 24%; margin: 1em 0 0; padding: .25em ; border: solid #ccc;
           border-width: .1em .1em .1em .1em; }
 #subnav ul { margin: 0; padding: 0; list-style: none; }
@@ -153,10 +153,21 @@ pre.prettyprint {
 #subnav li#current a{ background-image: url(img/bulletOn.gif) }
 #subnav li a:hover { background-image: url(img/bulletOn.gif) }
 
-#help_content p {
+#help_content {
+   max-width: 660px;
+
+   p {
     padding: 0;
     margin: 0 0 1em 0;
-    max-width: 660px;
+   }
+}
+
+div.help {
+  min-width: 992px;
+}
+
+pre.programtext {
+  max-width: 660px;
 }
 
 ul.across { width: 100%; display: block; list-style: none; }

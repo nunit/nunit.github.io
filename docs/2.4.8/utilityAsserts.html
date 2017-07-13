@@ -4,10 +4,10 @@ layout: help
 <div id="help_content">
 
 <h2>Utility Methods</h2>
-<p>Two utility methods, Fail() and Ignore() are provided in order to allow more 
+<p>Two utility methods, Fail() and Ignore() are provided in order to allow more
 	direct control of the test process:</p>
 <div class="code" style="width: 36em">
-	<pre class="highlight" class="prettyprint">Assert.Fail();
+	<pre class="prettyprint">Assert.Fail();
 Assert.Fail( string message );
 Assert.Fail( string message, object[] parms );
 
@@ -15,13 +15,13 @@ Assert.Ignore();
 Assert.Ignore( string message );
 Assert.Ignore( string message, object[] parms );</pre>
 </div>
-<p>The Assert.Fail method provides you with the ability to generate a failure based 
-	on tests that are not encapsulated by the other methods. It is also useful in 
+<p>The Assert.Fail method provides you with the ability to generate a failure based
+	on tests that are not encapsulated by the other methods. It is also useful in
 	developing your own project-specific assertions.</p>
-<p>Here's an example of its use to create a private assertion that tests whether a 
+<p>Here's an example of its use to create a private assertion that tests whether a
 	string contains an expected value.</p>
 <div class="code" style="width: 36em">
-	<pre class="highlight" class="prettyprint">public void AssertStringContains( string expected, string actual )
+	<pre class="prettyprint">public void AssertStringContains( string expected, string actual )
 {
     AssertStringContains( expected, actual, string.Empty );
 }
@@ -33,11 +33,11 @@ public void AssertStringContains( string expected, string actual,
         Assert.Fail( message );
 }</pre>
 </div>
-<p>The Assert.Ignore method provides you with the ability to dynamically cause a 
-	test or suite to be ignored at runtime. It may be called in a test, setup or 
-	fixture setup method. We recommend that you use this only in isolated cases. 
-	The category facility is provided for more extensive inclusion or exclusion of 
-	tests or you may elect to simply divide tests run on different occasions into 
+<p>The Assert.Ignore method provides you with the ability to dynamically cause a
+	test or suite to be ignored at runtime. It may be called in a test, setup or
+	fixture setup method. We recommend that you use this only in isolated cases.
+	The category facility is provided for more extensive inclusion or exclusion of
+	tests or you may elect to simply divide tests run on different occasions into
 	different assemblies.</p>
 
 </div>

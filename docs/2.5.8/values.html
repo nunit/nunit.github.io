@@ -10,16 +10,16 @@ layout: help
    NUnit combines the data provided for each parameter into a set of
    test cases, data must be provided for all parameters if it is
    provided for any of them.
-   
+
 <p>By default, NUnit creates test cases from all possible combinations
    of the datapoints provided on parameters - the combinatorial approach.
    This default may be modified by use of specific attributes on the
    test method itself.
-   
+
 <h4>Example</h4>
 
 <p>The following test will be executed six times, as follows:
-<pre class="highlight" class="prettyprint">
+<pre class="prettyprint">
 	MyTest(1, "A")
 	MyTest(1, "B")
 	MyTest(2, "A")
@@ -27,7 +27,7 @@ layout: help
 	MyTest(3, "A")
 	MyTest(3, "B")
 </pre>
-<div class="code"><pre class="highlight" class="prettyprint">
+<div class="code"><pre class="prettyprint">
 [Test]
 public void MyTest(
     [Values(1,2,3)] int x,

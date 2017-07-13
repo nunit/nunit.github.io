@@ -7,16 +7,16 @@ layout: help
 
 <h3>TestAttribute (NUnit 2.0)</h3>
 
-<p>The Test attribute marks a specific method inside a class that has already been 
-	marked as a TestFixture, as a test method. For backwards compatibility with 
-	previous versions of Nunit a test method will also be found if the first 4 
+<p>The Test attribute marks a specific method inside a class that has already been
+	marked as a TestFixture, as a test method. For backwards compatibility with
+	previous versions of Nunit a test method will also be found if the first 4
 	letters are &quot;test&quot; regardless of case.</p>
-	
+
 <p>The signature for a test method is defined as follows:
-	<pre class="highlight" class="prettyprint">        public void MethodName()</pre></p>
-	
-<p>Note that there must be no parameters. If the programmer marks a test method 
-	that does not have the correct signature it will not be run and it will appear 
+	<pre class="prettyprint">        public void MethodName()</pre></p>
+
+<p>Note that there must be no parameters. If the programmer marks a test method
+	that does not have the correct signature it will not be run and it will appear
 	in the Test Not Run area in the UI that ran the program.</p>
 
 <h4>Example:</h4>
@@ -24,7 +24,7 @@ layout: help
 <div class="code">
 
 <div class="langFilter">
-	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
+	<a href="javascript:Show('DD1')" onmouseover="Show('DD1')"><img src="/docs/img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
 	<div id="DD1" class="dropdown" style="display: none;" onclick="Hide('DD1')">
 		<a href="javascript:ShowCS()">C#</a><br>
 		<a href="javascript:ShowVB()">VB</a><br>
@@ -33,7 +33,7 @@ layout: help
 	</div>
 </div>
 
-<pre class="highlight" class="prettyprint cs">namespace NUnit.Tests
+<pre class="prettyprint cs">namespace NUnit.Tests
 {
   using System;
   using NUnit.Framework;
@@ -50,7 +50,7 @@ layout: help
 }
 </pre>
 
-<pre class="highlight" class="prettyprint vb">Imports System
+<pre class="prettyprint vb">Imports System
 Imports Nunit.Framework
 
 Namespace Nunit.Tests
@@ -63,7 +63,7 @@ Namespace Nunit.Tests
 End Namespace
 </pre>
 
-<pre class="highlight" class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
+<pre class="prettyprint mc">#using &lt;Nunit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -83,7 +83,7 @@ namespace NUnitTests {
 }
 </pre>
 
-<pre class="highlight" class="prettyprint js">package NUnit.Tests;
+<pre class="prettyprint js">package NUnit.Tests;
 
 import System.*;
 import NUnit.Framework.TestFixture;

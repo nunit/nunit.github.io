@@ -5,10 +5,10 @@ layout: help
 
 <h2>Condition Constraints (NUnit 2.4)</h2>
 
-<p>ConditionConstraints test a specific condition and are named for the condition 
+<p>ConditionConstraints test a specific condition and are named for the condition
    they test. They verify that the actual value satisfies the condition. The
    following condition helpers are provided.
-   
+
 <table class="constraints">
 <tr><th>Syntax Helper</th><th>Constructor</th><th>Operation</th></tr>
 <tr><td>Is.Null</td><td>EqualConstraint( null )</td></td><td>tests for null</td></tr>
@@ -20,8 +20,8 @@ layout: help
 </table>
 
 <h4>Examples</h4>
- 
-<div class="code"><pre class="highlight" class="prettyprint">
+
+<div class="code"><pre class="prettyprint">
 Assert.That( anObject, Is.Null );
 Assert.That( anObject, Is.Not.Null );
 Assert.That( condition, Is.True );
