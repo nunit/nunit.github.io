@@ -1,6 +1,6 @@
 NUnit3Testadapter, version 3.8 is released.
 
-Major feature is support for .net core /.net standard. 
+Major feature is support for .NET Core /.NET Standard. 
 
 See [the release notes](https://github.com/nunit/docs/wiki/Adapter-Release-Notes) for other fixes.
 
