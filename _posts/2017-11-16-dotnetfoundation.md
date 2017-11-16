@@ -6,7 +6,7 @@ categories: news update nunit
 ---
 ![NUnit and the .NET Foundation](/img/nunit_dotnetfoundation.png)
 
-NUnit is the oldest and most popular unit testing framework for .NET. It was originally written by Philip Craig in 2000 on an alpha release of the .NET Framework. As such, it is likely one of the first and longest running open source projects for .NET.
+NUnit is the oldest and most popular unit testing framework for .NET. It was originally written by Philip Craig in 2000 on an alpha release of the .NET Framework. NUnit is likely one of the first and longest running open source projects for .NET.
 
 As such, we are happy to announce that the NUnit Project is joining the [.NET Foundation](https://www.dotnetfoundation.org). NUnit will continue to be run by the core team, [Rob Prouse](http://www.alteridem.net), [Charlie Poole](http://www.charliepoole.org/), [Terje Sandstrom](http://Hermit.no), [Chris Maddock](https://github.com/ChrisMaddock) and [Joseph Musser](https://github.com/jnm2). The [.NET Foundation](https://www.dotnetfoundation.org) will provide guidance and support to help ensure the future of the project.
 
