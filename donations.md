@@ -18,6 +18,7 @@ We thank the following individuals and companies for their donations to the NUni
 
 ### 2017
 
+- [StickerYou Custom Stickers](https://www.stickeryou.com/)
 - Graham Wilson
 - Michal Bieszczad
 - Mighty IT (Pty) Ltd
