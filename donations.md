@@ -8,9 +8,7 @@ permalink: /donations/
 Your donation to NUnit helps us pay for web hosting, making presentations at user events and - of course - continuing
 to develop the software itself.
 
-You can make a donation easily through Paypal, by clicking on the 'Donate' button.
-
-{% include paypal.html %}
+> _Currently, financial contributions to NUnit are suspended while we complete our reorganization under the .NET Foundation._
 
 ## Recent Donations
 
@@ -19,6 +17,7 @@ We thank the following individuals and companies for their donations to the NUni
 ### 2017
 
 - [StickerYou Custom Stickers](https://www.stickeryou.com/)
+- Paul Evans
 - Graham Wilson
 - Michal Bieszczad
 - Mighty IT (Pty) Ltd
