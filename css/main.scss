@@ -57,7 +57,7 @@ $color-complement-4: #2A0200;
 // Pages
 //==============================
 body > div.container {
-    padding-top: 30px;
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 }
 
 //==============================
@@ -90,16 +90,21 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-end;
+  justify-content: flex-start;
+  align-items: center;
   height: 50px;
+
   background-color: $color-secondary-1-4;
 }
 
@@ -109,7 +114,6 @@ body {
 }
 
 .container .text-muted {
-  margin: 15px 0;
   color: lighten($gray-base, 77.7%);
 }
 
@@ -138,9 +142,18 @@ pre.prettyprint {
 }
 
 /* Submenu */
-#subnav { position: absolute; top: 100px; left: 76%; background-color: #ffd;
-          width: 24%; margin: 1em 0 0; padding: .25em ; border: solid #ccc;
-          border-width: .1em .1em .1em .1em; }
+#subnav {
+  position: absolute;
+  top: 100px;
+  left: 76%;
+  background-color: #ffd;
+  width: 24%;
+  margin: 1em 0 0;
+  padding: .25em ;
+  border: solid #ccc;
+  border-width: .1em .1em .1em .1em;
+}
+
 #subnav ul { margin: 0; padding: 0; list-style: none; }
 #subnav li{ margin: 0; padding: 2px 0 2px; }
 #subnav a { font: 1em "Times New Roman", Roman, serif; margin: 0; padding: 0 0 0 26px;
