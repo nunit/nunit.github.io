@@ -1,4 +1,4 @@
-NUnit Test Generator extension for Visual Studio 2017, version 2.1 is released.
+NUnit Test Generator extension for Visual Studio 2017 version 2.1 is released.
 
 Supports new structure for Visual Studio 2017 Update 9 and forward.
 (Note: If not disabled in VS, this extension is automatically updated once installed)
