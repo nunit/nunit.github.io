@@ -7,8 +7,8 @@
 
 # Site settings
 title: NUnit.org
-email: 
-description: NUnit is the most popular unit test framework for .NET.  
+email:
+description: NUnit is the most popular unit test framework for .NET.
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: nunit
 github_username:  nunit
@@ -20,3 +20,4 @@ markdown: kramdown
 production_url: "http://nunit.org"
 rss_path: /rss.xml
 atom_path: /atom.xml
+host: 0.0.0.0
