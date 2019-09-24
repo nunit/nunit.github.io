@@ -1,3 +1,14 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+Thumbs.db
+.DS_Store
+
+!.gitkeep
+
+.rbenv-version
+.rvmrc
+.bundle
+Gemfile.lock
+jekyll
