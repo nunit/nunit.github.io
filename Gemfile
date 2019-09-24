@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem 'jekyll'
-gem 'github-pages'
+gem 'jekyll', '>= 3.8.5'
+gem 'github-pages', '~> 198'
 gem 'yajl-ruby', '>= 1.3.1'
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'wdm', '>= 0.1.1' if Gem.win_platform?
+gem 'solargraph'
