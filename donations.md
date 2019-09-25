@@ -5,10 +5,9 @@ icon: fa-usd
 permalink: /donations/
 ---
 
-Past donations to NUnit helped pay for web hosting, making presentations at user events and - of course - continuing
-to develop the software itself.
-
-> _Currently, financial contributions to NUnit are suspended while we complete our reorganization under the .NET Foundation._
+Past donations to NUnit helped pay for web hosting, making presentations at user events and developing the software itself.
+The team has decided to no longer accept donations at this time, but we are maintaining this page to acknowlege past
+contributions.
 
 ## Recent Donations
 
