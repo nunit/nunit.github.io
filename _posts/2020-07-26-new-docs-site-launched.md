@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "NUnit Launches docs.nunit.org, Welcomes Sean Killeen as Docs Project Lead"
-date:   2020-02-15 12:00:00 -0000
+date:   2020-07-26 12:00:00 -0000
 categories: news update nunit docs
 ---
 
