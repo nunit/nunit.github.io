@@ -7,4 +7,4 @@ categories: news update nunit docs
 
 NUnit's documentation has moved from its former GitHub wiki to a new site at <https://docs.nunit.org>. The site is now built from the content at the [nunit/docs GitHub repository](https://github.com/nunit/docs).
 
-[Sean Killeen](https://SeanKilleen.com) has joined the NUnit team as the new lead of the docs project. We welcome Sean to the project, and look forward to seeing everyone's great contributions to the docs going forward!
+[Sean Killeen](https://SeanKilleen.com) has joined the NUnit team as the new lead of the docs project. We welcome Sean to the project, and are excited to see everyone's great contributions to the docs going forward!
