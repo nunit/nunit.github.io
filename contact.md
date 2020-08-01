@@ -26,6 +26,7 @@ If you are not sure where to report a particular problem, please ask! If you are
 - [NUnit Xamarin Runner](http://github.com/nunit/nunit.xamarin/issues)
 - [NUnit Templates](http://github.com/nunit/nunit-vs-templates/issues)
 - [NUnit VS Adapter](http://github.com/nunit/nunit-vs-adapter/issues)
+- [NUnit 3 Test Project Template for dotnet new CLI](http://github.com/nunit/dotnet-new-nunit/issues)
 
 **Note:** Bugs are no longer accepted on the NUnit V2 and NUnitLite projects. NUnit V2 bugs should be filed against the most appropriate project above and we'll check to see the problem doesn't occur in NUnit 3. NUnitLite bugs should be filed against the NUnit Framework, noting that the bug was found in the nunitlite environment.
 
