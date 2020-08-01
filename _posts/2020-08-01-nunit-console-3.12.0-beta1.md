@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "NUnit Console and Engine 3.12.0 Beta 1 Released"
-date:   2020-02-15 12:00:00 -0000
+date:   2020-08-01 12:00:00 -0000
 categories: news update nunit
 ---
 
