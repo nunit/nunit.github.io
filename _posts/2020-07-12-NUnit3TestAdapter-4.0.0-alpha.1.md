@@ -8,7 +8,7 @@ We would really appreciate it if you give this alpha a spin. and report whatever
 
 The major fix in this release is to bring back the **Explicit** test runs, both in Visual Studio and on the command line with dotnet test and vstest.console. In addition to this, the implementation handles even more cases than before.
 
-Further there has been a significant performance improvement for large test sets, and in particular when you run with categories or other filters.
+Furthermore, there has been a significant performance improvement for large test sets, in particular when you run with categories or other filters.
 
 ## Reason for major version change
 
