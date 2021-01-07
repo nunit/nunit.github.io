@@ -4,7 +4,7 @@ This is an early pre-release version.
 
 The code has been rewritten/refactored in order to get some of the more complex issues fixed. It does pass all the automatic tests we have, but there are still more tests we would like to take it through, before we release a beta.
 
-We would really appreciate it if you give this alpha a spin. and report whatever you find back to us.
+We would really appreciate it, if you give this alpha a spin and report whatever you find back to us.
 
 The major fix in this release is to bring back the **Explicit** test runs, both in Visual Studio and on the command line with dotnet test and vstest.console. In addition to this, the implementation handles even more cases than before.
 
