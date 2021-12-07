@@ -103,9 +103,19 @@ body {
   justify-self: flex-end;
   justify-content: flex-start;
   align-items: center;
-  height: 50px;
+  padding: 15px 0;
 
   background-color: $color-secondary-1-4;
+
+  @media (max-width: 767px) {
+      .col-sm-4 {
+          padding-bottom: 5px;
+          &:last-child {
+              padding-bottom: 0;
+              text-align: center;
+          }
+      }
+  }
 }
 
 .footer > .container {
