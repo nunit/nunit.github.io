@@ -5,7 +5,7 @@ date:   2022-01-15 12:00:00 -0000
 categories: news update nunit
 ---
 
-This is the first release of the NUnit Console Runner, which allows running of both .NET Framework and .NET Core tests, either separately or in combination. The Console runner executes under the .NET Framework but is able to launch .NET Core agents and communicate with them over a TCP connection.
+This is the first release of the NUnit Console Runner, which allows running of both .NET Framework and .NET Core tests, either separately or in combination. The Console Runner executes under the .NET Framework but is able to launch .NET Core agents and communicate with them over a TCP connection.
 
 A second major feature is the availability of preemptive cancellation when the normal approach of requesting the test run to terminate itself doesn't work. This is an engine feature, available to any runners supporting cancellation.
 
