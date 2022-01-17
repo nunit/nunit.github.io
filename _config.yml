@@ -17,7 +17,7 @@ github_username:  nunit
 markdown: kramdown
 
 # This is used in the Atom & RSS feeds and in the sitemap
-production_url: "http://nunit.org"
+production_url: "https://nunit.org"
 rss_path: /rss.xml
 atom_path: /atom.xml
 host: 0.0.0.0
