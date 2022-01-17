@@ -20,9 +20,9 @@ Bugs, enhancements and feature requests should be entered as issues in the appro
 
 If you are not sure where to report a particular problem, please ask! If you aren't sure, don't worry... we can cross-reference it from the appropriate project.
 
-- [NUnit Framework](http://github.com/nunit/nunit/issues)
-- [NUnit Console Runner and Engine](http://github.com/nunit/nunit-console/issues)
-- [NUnit 3 VS Adapter](http://github.com/nunit/nunit3-vs-adapter/issues)
-- [NUnit 3 Test Project Template for dotnet new CLI](http://github.com/nunit/dotnet-new-nunit/issues)
+- [NUnit Framework](https://github.com/nunit/nunit/issues)
+- [NUnit Console Runner and Engine](https://github.com/nunit/nunit-console/issues)
+- [NUnit 3 VS Adapter](https://github.com/nunit/nunit3-vs-adapter/issues)
+- [NUnit 3 Test Project Template for dotnet new CLI](https://github.com/nunit/dotnet-new-nunit/issues)
 
 **Note:** Bugs are no longer accepted on the NUnit V2 and NUnitLite projects. NUnit V2 bugs should be filed against the most appropriate project above and we'll check to see the problem doesn't occur in NUnit 3. NUnitLite bugs should be filed against the NUnit Framework, noting that the bug was found in the nunitlite environment.

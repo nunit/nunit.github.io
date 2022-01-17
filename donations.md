@@ -28,7 +28,7 @@ We thank the following individuals and companies for their donations to the NUni
 - Himanshu Saxena
 - Dot Media
 - Yevgeniy Mayskiy
-- MacFarlane Physiotherapy, [www.macfarlanephysio.co.uk](http://www.macfarlanephysio.co.uk)
+- MacFarlane Physiotherapy, [www.macfarlanephysio.co.uk](https://www.macfarlanephysio.co.uk)
 - Dzmitry Lahoda
 - Righthand Miha Markic s.p.
 - Erl Egestad
@@ -36,14 +36,14 @@ We thank the following individuals and companies for their donations to the NUni
 ### 2015
 
 - Jason Walker
-- Bennex E-commerce Ltd, [giftprezzy.com](http://giftprezzy.com)
+- Bennex E-commerce Ltd, [giftprezzy.com](https://giftprezzy.com)
 - Brandon Ringe
 - Stephen Chownwai
 - Галимова Алсу
 - Justin Klumpp
 - Righthand Miha Markic s.p.
 - Gregory HillsHelmer
-- Bryan & Armstrong Ltd. [bryan-armstrong.com](http://bryan-armstrong.com)
+- Bryan & Armstrong Ltd. [bryan-armstrong.com](https://bryan-armstrong.com)
 - Sebastien Guimmara
 - Ian Carson
 - Jose Jr Manzano
@@ -57,7 +57,7 @@ We thank the following individuals and companies for their donations to the NUni
 - Gorrior
 - Chintha Mithra
 - Health Internetwork
-- Alistair Fenwick, [www.carltonbusinesscentre.co.uk](http://www.carltonbusinesscentre.co.uk)
+- Alistair Fenwick, [www.carltonbusinesscentre.co.uk](https://www.carltonbusinesscentre.co.uk)
 - Bert de Miranda
 - Alexander Krylkov
 - Omid Sharafzadeh
