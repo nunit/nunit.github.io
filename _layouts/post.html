@@ -3,14 +3,14 @@ layout: default
 ---
 <div class="container">
     <div class="content">
-        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
 
             <header>
                 <h1 itemprop="name headline">{{ page.title }}</h1>
                 <p>
                     <em><i class="fas fa-calendar" aria-hidden="true"></i> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></em>
                     {% if page.author %}
-                     • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+                     • <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
                     {% endif %}</p>
                     <hr />
             </header>
