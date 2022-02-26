@@ -5,7 +5,7 @@ date:   2022-02-36 12:00:00 -0000
 categories: news update nunit
 ---
 
-The NUnit team condemns, in the strongest terms, the unprovoked and abhorrent invasion of Ukraine by the Russia, in violation of Article 2(4) of the U.N. Charter, which prohibits the use of force against the territorial integrity of another state.
+The NUnit team condemns, in the strongest terms, the unprovoked and abhorrent invasion of Ukraine by the Russian military, in violation of Article 2(4) of the U.N. Charter, which prohibits the use of force against the territorial integrity of another state.
 
 Russia's action unnecessarily and unlawfully endanger the lives of millions of people, families, and children. And so, though our core team's voices may be small in number, we nevertheless still use them to call on Russia to end this injustice.
 
