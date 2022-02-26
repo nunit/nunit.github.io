@@ -17,7 +17,7 @@ Signed,
 
 NUnit Core Team (in alphabetic order of last name)
 
-* Mikkel Bundgaard (TODO: Only with Mikkel's express approval)
+* Mikkel Bundgaard
 * Sean Killeen
 * Joseph Musser
 * Charlie Poole
