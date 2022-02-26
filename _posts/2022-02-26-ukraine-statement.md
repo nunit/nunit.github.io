@@ -14,6 +14,7 @@ We, like so many of our users and contributors, will continually be seeking ways
 May Ukraine retain and regain its sovereignty and security, and may it know peace as soon as possible.
 
 Signed,
+
 NUnit Core Team (in alphabetic order of last name)
 
 * Mikkel Bundgaard (TODO: Only with Mikkel's express approval)
