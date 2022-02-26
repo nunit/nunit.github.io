@@ -9,7 +9,7 @@ The NUnit team condemns, in the strongest terms, the unprovoked and abhorrent in
 
 Russia's action unnecessarily and unlawfully endangers the lives of millions of people, families, and children. And so, though our core team's voices may be small in number, we nevertheless still use them to call on Russia to end this injustice.
 
-We, like so many of our users and contributors, will continually be seeking ways to stand in solidarity with the Ukrainian people. We encourage you to donate to the [Ukrainian Red Cross](https://redcross.org.ua/en/donate/), something each of us have done.
+We, like so many of our users and contributors, will continually be seeking ways to stand in solidarity with the Ukrainian people. We encourage you to donate to the [Ukrainian Red Cross](https://donate.redcrossredcrescent.org/), something each of us have done. You may also consider other donations at the [Stand with Ukraine page provided by the Ukrainian government.](https://ukraine.ua/news/stand-with-ukraine/)
 
 May Ukraine retain and regain its sovereignty and security, and may it know peace as soon as possible.
 
