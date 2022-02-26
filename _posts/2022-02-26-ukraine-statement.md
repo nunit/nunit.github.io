@@ -11,7 +11,7 @@ Russia's action unnecessarily and unlawfully endangers the lives of millions of 
 
 We, like so many of our users and contributors, will continually be seeking ways to stand in solidarity with the Ukrainian people. We encourage you to donate to the [Ukrainian Red Cross](https://redcross.org.ua/en/donate/), something each of us have done.
 
-May Ukraine retain its sovereignty and security, and may it know peace as soon as possible.
+May Ukraine retain and regain its sovereignty and security, and may it know peace as soon as possible.
 
 Signed,
 NUnit Core Team (in alphabetic order of last name)
