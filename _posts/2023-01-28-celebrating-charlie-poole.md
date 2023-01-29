@@ -15,7 +15,7 @@ Charlie was also naturally heavily involved with the governance for the projects
 
 ## A Place for You to Say Thanks
 
-Has NUnit helped your project or helped you in your career? We'd love to hear some of these stories as a way of showing Charlie the impact he's had. You can add your story to the discussion at x
+Has NUnit helped your project or helped you in your career? We'd love to hear some of these stories as a way of showing Charlie the impact he's had. [You can add your story to the discussion here](https://github.com/nunit/nunit/discussions/4283).
 
 ## Announcing `Assert.Charlie()` – Permanently Celebrating Charlie's Work
 
