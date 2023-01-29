@@ -5,7 +5,7 @@ date:   2023-01-28 19:00:00 -0500
 categories: news update nunit
 ---
 
-NUnit has been around for a while – it debuted in 2000, along with .NET itself. **And for over 20 years now**, NUnit has been steered by Charlie Poole, an incredible talent who gave an extraordinary amount of time and effort to this project. NUnit has been downloaded 225+ million times and helped countless .NET developers.
+NUnit has been around for a while – it debuted in 2000, along with .NET itself. And while he didn't originate the project, **for over 20 years now** NUnit has been steered by Charlie Poole, an incredible talent who gave an extraordinary amount of time and effort to the endeavor. NUnit has been downloaded 225+ million times and helped countless .NET developers.
 
 This month, Charlie Poole completed his transition in stepping back from the Core team of the NUnit project. We'd be remiss if we didn't take a moment to recognize and thank Charlie, who we consider to be part of the founding generation of .NET OSS, and to whom we owe a debt of gratitude.
 
