@@ -25,6 +25,6 @@ Charlie's fingerprints will remain on this project forever, but we wanted to pay
 
 With Charlie's retirement from the project, we need additional minds now more than ever. If you've been looking to get into contributing to open source, or you care deeply about enabling automated testing in the .NET ecosystem, we encourage you to get involved, and we'd love to help! Reach out to any of us, [join our Slack organization](https://join.slack.com/t/nunit/shared_invite/zt-jz58jw68-Led8y3WH4n2a~Y5WjuOpKA), or take a look at [any of the repositories in the NUnit GitHub org](http://github.com/nunit).
 
-## Thank you, Charlie
+## Thank you, Charlie.
 
 There's no easy way to sum up 20+ years of commitment to an open-source project, but Charlie's love for .NET developers and his impact will be lasting. Thank you, Charlie, for giving so much of yourself to nurture an important project that enables the entire .NET ecosystem.
