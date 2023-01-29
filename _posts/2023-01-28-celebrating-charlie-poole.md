@@ -19,7 +19,7 @@ Has NUnit helped your project or helped you in your career? We'd love to hear so
 
 ## Announcing `Assert.Charlie()` – Permanently Celebrating Charlie's Work
 
-Charlie's fingerprints will remain on this project forever, but we wanted to pay a more direct tribute to him. We will be adding a method, `Assert.Charlie()`, which will be an alias of `Assert.Pass()` but will also output a message of thanks. We're doing this to celebrate the countless tests that Charlie has helped bring into being via his enduring love for this library, and the resulting impact on the .NET Community.
+Charlie's fingerprints will remain on this project forever, but we wanted to pay a more direct tribute to him. [We will be adding a method, `Assert.Charlie()`](https://github.com/nunit/nunit/pull/4284), which will be an alias of `Assert.Pass()` but will also output a message of thanks. We're doing this to celebrate the countless tests that Charlie has helped bring into being via his enduring love for this library, and the resulting impact on the .NET Community.
 
 ## Big shoes to fill – join us
 
