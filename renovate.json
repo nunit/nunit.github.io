@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^download\\.html$"],
+      "matchStrings": [
+        "<!--\\s*renovate:\\s*datasource=(?<datasource>[a-z-]+)\\s+depName=(?<depName>\\S+)\\s*-->\\s*\\r?\\n\\s*<td><a [^>]+>[^<]*?(?<currentValue>\\d+(?:\\.\\d+)+(?:-[A-Za-z0-9.-]+)?)</a></td>"
+      ],
+      "extractVersionTemplate": "^v?(?<version>.+)$",
+      "versioningTemplate": "semver-coerced"
+    }
+  ]
+}
