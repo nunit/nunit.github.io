@@ -11,7 +11,7 @@ title: Atom Feed
  <id>{{ site.production_url }}</id>
  <author>
    <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <email>{{Tomkhatsara1991@gmail.com}}</email>
  </author>
 
  {% for post in site.posts %}
